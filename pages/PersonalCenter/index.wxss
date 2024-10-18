@@ -1,0 +1,6 @@
+/* pages/PersonalCenter/index.wxss */
+/* 覆盖全局样式，设置为白色背景或其他你想要的颜色 */
+page {
+  background: rgb(215, 240, 222); /* 或者设置为其他你需要的颜色 */
+  background-attachment: scroll; /* 允许背景跟随页面滚动 */
+}

@@ -1,0 +1,5 @@
+/* pages/CampusServices/index.wxss */
+page {
+  background: rgb(215, 240, 222); /* 或者设置为其他你需要的颜色 */
+  background-attachment: scroll; /* 允许背景跟随页面滚动 */
+}

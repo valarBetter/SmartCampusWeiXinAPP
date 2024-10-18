@@ -1,0 +1,89 @@
+/* 整体页面的背景和布局 */
+page {
+  overflow: hidden; /* 禁用页面滚动 */
+}
+.container {
+  display: flex; /* 使用 flex 布局，使子元素可以自由排列 */
+  flex-direction: column; /* 子元素垂直排列 */
+  align-items: center; /* 子元素水平居中 */
+  height: 100vh; /* 高度为视口高度的 100% */
+}
+.logintext{
+  margin: 5px 5px;
+}
+/* 头部的标题和问候 */
+.header {
+  display: flex; 
+  flex-direction: column; /* 子元素垂直排列 */
+  margin: 10rpx 470rpx 10rpx 10rpx; /* 顶部的外边距，提供空间使内容向下移动 */
+}
+
+
+.greeting {
+  font-size: 55rpx; /* 问候语的字体大小 */
+  color: #ffffff; /* 问候语的文字颜色为白色 */
+  margin-top: 10rpx; /* 问候语顶部的外边距，提供一定的间距 */
+}
+
+.sub-greeting {
+  font-size: 30rpx; /* 副问候语的字体大小 */
+  color: #ffffff; /* 副问候语的文字颜色为白色 */
+  margin-top: 10rpx; /* 副问候语顶部的外边距，提供间距 */
+}
+
+/* 登录框的样式 */
+.login-box {
+  background-color: #ffffff; /* 登录框的背景颜色为白色 */
+  width: 70%; /* 登录框占页面宽度的 80% */
+  border-radius: 40rpx; /* 设置圆角为 20rpx，使其边角变圆 */
+  padding: 40rpx; /* 内边距为 40rpx，确保内部元素与边框有足够空间 */
+  margin-top: 30rpx; /* 顶部外边距，使登录框与上方元素有间距 */
+}
+
+.login-title {
+  font-size: 50rpx; /* 登录标题的字体大小 */
+  text-align: center; /* 标题文本居中对齐 */
+  margin-bottom: 40rpx; /* 底部外边距，使标题与下方内容有间隔 */
+  color: #28a745; /* 标题的颜色为绿色 */
+}
+
+/* 输入框的样式 */
+.input-box {
+  margin-bottom: 20rpx; /* 输入框底部的外边距，提供下方间隔 */
+}
+
+.input {
+  width: 92%; /* 输入框占据父容器的 100% 宽度 */
+  padding: 20rpx; /* 输入框的内边距，使文字内容离边框有足够的空间 */
+  border-radius: 20rpx; /* 设置输入框的圆角边框，边角半径为 10rpx */
+  border: 1rpx solid #dcdcdc; /* 输入框边框为 1rpx 宽，颜色为浅灰色 */
+  font-size: 28rpx; /* 输入框内文字的字体大小 */
+}
+
+/* 忘记密码链接的样式 */
+.forgot-register {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* 子元素两端对齐 */
+  margin-bottom: 40rpx;
+}
+.forgot-text {
+  font-size: 24rpx; /* 忘记密码文本的字体大小 */
+  color: #007bff; /* 文本颜色为蓝色，表示其为链接 */
+  text-align: right; /* "忘记密码" 链接右对齐 */
+}
+.register-text {
+  font-size: 24rpx; /* 立即注册文本的字体大小 */
+  color: #007bff; /* 文本颜色为蓝色，表示其为链接 */
+  text-align: left; /* "立即注册" 链接左对齐 */
+}
+/* 登录按钮的样式 */
+.login-button {
+  width: 100%; /* 按钮占据父容器的 100% 宽度 */
+  padding: 20rpx; /* 按钮内边距，使文本内容离按钮边框有足够的空间 */
+  background-color: #2dca52; /* 按钮的背景颜色为绿色 */
+  color: #ffffff; /* 按钮文字的颜色为白色 */
+  border-radius: 15rpx; /* 按钮的圆角边框，边角半径为 10rpx */
+  font-size: 28rpx; /* 按钮中文字的字体大小 */
+  text-align: center; /* 按钮文字居中对齐 */
+}

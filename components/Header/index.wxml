@@ -1,0 +1,20 @@
+<!--components/Header/index.wxml-->
+<view class="header-wrap">
+  <!-- 占位块 -->
+  <view class="empty-header-wrap">
+    <view class="nav-bar" style="height: {{navBarHeight}}px"></view>
+    <view class="empty-box"></view>
+  </view>
+  <view class="header-fixed-wrap">
+    <view class="nav-bar" style="height: {{navBarHeight}}px"></view>
+    <view class="flex-box">
+      <view class="left">   
+        <image src="../../icon/return.png" type="default" class="button-back" bind:tap="backEvent" wx:if="{{isShowBack}}"></image>
+      </view>
+      <view class="middle">
+        <view class="title">{{title}}</view>
+      </view>
+      <view class="right"></view>
+    </view>
+  </view>
+</view>
