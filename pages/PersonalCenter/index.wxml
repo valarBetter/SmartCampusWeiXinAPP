@@ -4,11 +4,11 @@
   <view class="header">
     <image src="../../icon/personalpicture.png" class="personalpicture"></image>
     <view class="informationbox">
-      <view class="personalname">姓名</view>
+      <view class="personalname">{{personalname}}</view>
       <view class="minbox">
-        <view class="studentno">学号</view>
+        <view class="studentno">{{studentno}}</view>
         <view class="divLine"></view>
-        <view class="profession">专业</view>
+        <view class="profession">{{profession}}</view>
       </view>
     </view>
   </view>

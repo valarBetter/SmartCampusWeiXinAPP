@@ -1,5 +1,13 @@
 // pages/PersonalCenter/index.js
 Page({
+
+  data: {
+    studentno: '2100301327',
+    personalname: '李四', 
+    profession: '软件工程',
+  },
+
+
   backEvent: function() {
     console.log('点击了退出');
     wx.reLaunch({
