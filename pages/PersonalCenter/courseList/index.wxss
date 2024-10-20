@@ -1,0 +1,5 @@
+/* pages/PersonalCenter/courseList/index.wxss */
+page {
+  background: rgb(215, 240, 222); /* 或者设置为其他你需要的颜色 */
+  overflow: hidden; /* 禁用页面滚动 */
+}

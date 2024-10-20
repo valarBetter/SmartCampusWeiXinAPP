@@ -7,7 +7,10 @@
     "pages/login/ResetPassword/index",
     "pages/PersonalCenter/index",
     "pages/CampusServices/index",
-    "pages/CampusInformation/index"
+    "pages/CampusInformation/index",
+    "pages/PersonalCenter/courseList/index",
+    "pages/PersonalCenter/gradeSearch/index",
+    "pages/PersonalCenter/personalMessage/index"
   ],
   "window": {
     "navigationBarTextStyle": "black",
@@ -26,7 +29,7 @@
     "color": "#333",
     "selectedColor": "#ff0000",
     "backgroundColor": "#f5f5f5",
-    "borderStyle":"black",
+    "borderStyle": "black",
     "list": [
       {
         "pagePath": "pages/CampusServices/index",

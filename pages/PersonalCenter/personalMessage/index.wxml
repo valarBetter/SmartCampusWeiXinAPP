@@ -1,0 +1,49 @@
+<!--pages/PersonalCenter/personalMessage/index.wxml-->
+<custom-header title="个人信息"></custom-header>
+<view class="container">
+  <view class="header">
+    <image src="../../icon/personalpicture.png" class="personalpicture"></image>
+  </view>
+
+
+
+
+
+
+
+  <view class="function-box">
+    <view class="tabbox">
+      <view class="subtabbox" >
+        <view class="key">姓名：</view>
+        <view class="value">软件工程</view>
+      </view> 
+      <view class="transverseLine"></view>
+      <view class="subtabbox" >
+        <view class="key">学号：</view>
+        <view class="value">软件工程</view>
+      </view> 
+      <view class="transverseLine"></view>
+      <view class="subtabbox" >
+        <view class="key">年级：</view>
+        <view class="value">软件工程</view>
+      </view> 
+      <view class="transverseLine"></view>
+      <view class="subtabbox" >
+        <view class="key">专业：</view>
+        <view class="value">软件工程</view>
+      </view> 
+      <view class="transverseLine"></view>
+      <view class="subtabbox" >
+        <view class="key">性别：</view>
+        <view class="value">软件工程</view>
+      </view> 
+      <view class="transverseLine"></view>
+      <view class="subtabbox" >
+        <view class="key">联系方式：</view>
+        <view class="value">软件工程</view>
+      </view> 
+      <view class="transverseLine"></view>
+      <button class="change-button" bindtap="goToPersonalCenter" style="width:40%">修改信息</button>
+    </view> 
+  </view>
+</view>

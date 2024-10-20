@@ -9,18 +9,18 @@
     <view class="login-title">登录</view>
 
     <view class="input-box">
-      <view class="logintext">学号</view>
-      <input class="input" placeholder="请输入学号" />
+      <view class="logintext">账号</view>
+      <input class="input" placeholder="请输入账号" bindinput="onInputAccount"/>
     </view>
 
     <view class="input-box">
       <view class="logintext">密码</view>
-      <input class="input" password="true" placeholder="请输入密码" />
+      <input class="input" password="true" placeholder="请输入密码" bindinput="onInputPassword"/>
     </view>
     <view class="forgot-register">
       <text class="forgot-text" bindtap="goToResetPassword">忘记密码?</text>
       <text class="register-text" bindtap="goToRegister">立即注册</text>
     </view>
-    <button class="login-button" bindtap="goToPersonalCenter">立即登录</button>
+    <button class="login-button" bindtap="goToPersonalCenter" style="width:50%">立即登录</button>
   </view>
 </view>
