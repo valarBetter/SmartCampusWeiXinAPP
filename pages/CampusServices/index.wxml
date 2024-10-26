@@ -1,6 +1,78 @@
 <!--pages/CampusServices/index.wxml-->
 <custom-header title="校园服务"></custom-header>
-<text>测试git</text>
+<view class="container">
+  <view class="card-box" bind:tap="gotoSchoolCard">
+    <view class="box1">
+      <image src="../../icon/personalpicture.png" class="personalpicture"></image>
+      <view class="informationbox">
+        <view class="schoolname">{{schoolname}}</view>
+        <view class="minbox">
+          <view class="personalname">{{personalname}}</view>
+          <view class="studentno">{{studentno}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="informationbox1">
+      <view class="balance">校园卡余额 ></view>
+      <view class="minbox1">
+        <view class="countno">{{countno}}</view>
+        <view class="unit">元</view>
+      </view>
+    </view>
+  </view>
+  <view class="function-box">
+    <view class="tabbox">
+      <view class="subtabbox" bind:tap="gotoSelectCourse">
+        <image src="../../icon/personalMessage.png" class="iconpicture"></image>
+        <view class="subtabnamebox">
+          <text class="subtabname">选择课程</text>
+        </view>
+        <image src="../../icon/next.png" class="gotoicon">icons</image>
+      </view> 
+      <view class="transverseLine"></view>
+      <view class="subtabbox" bind:tap="gotoBookSearch">
+        <image src="../../icon/courseList.png" class="iconpicture"></image>
+        <view class="subtabnamebox">
+          <view class="subtabname">图书查询</view>
+        </view>
+        <image src="../../icon/next.png" class="gotoicon">icons</image>
+      </view>
+      <view class="transverseLine"></view>
+      <view class="subtabbox" bind:tap="gotoPhoneSearch">
+        <image src="../../icon/list.png" class="iconpicture"></image>
+        <view class="subtabnamebox">
+          <view class="subtabname">电话查询</view>
+        </view>
+        <image src="../../icon/next.png" class="gotoicon">icons</image>
+      </view>
+      <view class="transverseLine"></view>
+      <view class="subtabbox" bind:tap="gotoSchoolIntroduce">
+        <image src="../../icon/list.png" class="iconpicture"></image>
+        <view class="subtabnamebox">
+          <view class="subtabname">学校相关介绍</view>
+        </view>
+        <image src="../../icon/next.png" class="gotoicon">icons</image>
+      </view>
+      <view class="transverseLine"></view>
+      <view class="subtabbox" bind:tap="gotoSchoolMap">
+        <image src="../../icon/list.png" class="iconpicture"></image>
+        <view class="subtabnamebox">
+          <view class="subtabname">学校地图查询</view>
+        </view>
+        <image src="../../icon/next.png" class="gotoicon">icons</image>
+      </view>
+      <view class="transverseLine"></view>
+      <view class="subtabbox" bind:tap="gotoWebsiteIndex">
+        <image src="../../icon/list.png" class="iconpicture"></image>
+        <view class="subtabnamebox">
+          <view class="subtabname">网络导航</view>
+        </view>
+        <image src="../../icon/next.png" class="gotoicon">icons</image>
+      </view>
+      <view class="transverseLine"></view>
+    </view> 
+  </view>
+</view>
 
 
 

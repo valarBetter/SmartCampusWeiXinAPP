@@ -5,62 +5,73 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    studentno: '2100301327',
+    personalname: '张三', 
+    schoolname: '桂林电子科技大学',
+    countno: '59.2'
+  },
+  gotoSchoolCard: function() {
+    console.log('点击了校园卡');
+    wx.navigateTo({
+      url: '/pages/CampusServices/schoolcard/index',
+      fail: function(err) {
+        console.error('跳转失败:', err);  // 输出跳转失败的错误信息
+      }
+    });
+  },
+  gotoSelectCourse: function() {
+    console.log('点击了选择课程');
+    wx.navigateTo({
+      url: '/pages/CampusServices/selectCourse/index',
+      fail: function(err) {
+        console.error('跳转失败:', err);  // 输出跳转失败的错误信息
+      }
+    });
+  },
+  gotoBookSearch: function() {
+    console.log('点击了图书查询');
+    wx.navigateTo({
+      url: '/pages/CampusServices/booksearch/index',
+      fail: function(err) {
+        console.error('跳转失败:', err);  // 输出跳转失败的错误信息
+      }
+    });
+  },
+  gotoPhoneSearch: function() {
+    console.log('点击了电话查询');
+    wx.navigateTo({
+      url: '/pages/CampusServices/phonesearch/index',
+      fail: function(err) {
+        console.error('跳转失败:', err);  // 输出跳转失败的错误信息
+      }
+    });
+  },
+  gotoSchoolIntroduce: function() {
+    console.log('点击了学校相关介绍');
+    wx.navigateTo({
+      url: '/pages/CampusServices/schoolintroduce/index',
+      fail: function(err) {
+        console.error('跳转失败:', err);  // 输出跳转失败的错误信息
+      }
+    });
+  },
+  gotoSchoolMap: function() {
+    console.log('点击了学校地图查询');
+    wx.navigateTo({
+      url: '/pages/CampusServices/schoolmap/index',
+      fail: function(err) {
+        console.error('跳转失败:', err);  // 输出跳转失败的错误信息
+      }
+    });
+  },
+  gotoWebsiteIndex: function() {
+    console.log('点击了网络导航');
+    wx.navigateTo({
+      url: '/pages/CampusServices/websiteindex/index',
+      fail: function(err) {
+        console.error('跳转失败:', err);  // 输出跳转失败的错误信息
+      }
+    });
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad(options) {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage() {
-
-  }
 })

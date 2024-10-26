@@ -1,7 +1,9 @@
 /* pages/login/ResetPassword/index.wxss */
 /* 整体页面的背景和布局 */
 page {
-  overflow: hidden; /* 禁用页面滚动 */
+  background: -webkit-linear-gradient(top,rgb(134, 233, 139),#94e49f,white);
+  background-size: cover; /* 确保背景覆盖整个页面 */
+  background-attachment: fixed; /* 固定背景，使其不会随页面滚动 */
 }
 .container {
   display: flex; /* 使用 flex 布局，使子元素可以自由排列 */

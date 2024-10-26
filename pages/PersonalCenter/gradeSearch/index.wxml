@@ -1,3 +1,45 @@
 <!--pages/PersonalCenter/gradeSearch/index.wxml-->
 <custom-header title="成绩查询"></custom-header>
-<text>pages/PersonalCenter/gradeSearch/index.wxml</text>
+<view class="container">
+  <view class="function-box">
+    <text>选择学期：</text>
+    
+    <select-postSale nowId="{{curfId}}" nameList="{{brandList}}" nowName="{{curBrandName}}" placeholder="请选择品牌" bind:handleChange="changeBrand"></select-postSale>
+  </view>
+
+  <view class="course-box">
+    <view class="header">2024-2025下半学期</view>
+    <view class="listbox">
+      <view class="projectname">课程名称</view>
+      <view class="projectname">成绩分数</view>
+      <view class="projectname">考试类型</view>
+    </view>
+    <view class="listbox">
+      <view class="projectname">计算机科学</view>
+      <view class="gradelevel">78</view>
+      <view class="projectname">期末考试</view>
+    </view>
+    <view class="transverseLine"></view>
+    <view class="listbox">
+      <view class="projectname">计算机科学</view>
+      <view class="gradelevel">78</view>
+      <view class="projectname">期末考试</view>
+    </view>
+    <view class="transverseLine"></view>
+    <view class="listbox">
+      <view class="projectname">计算机科学</view>
+      <view class="gradelevel">78</view>
+      <view class="projectname">期末考试</view>
+    </view>
+    <view class="transverseLine"></view>
+    <view class="listbox">
+      <view class="projectname">计算机科学</view>
+      <view class="gradelevel">78</view>
+      <view class="projectname">期末考试</view>
+    </view>
+    <view class="transverseLine"></view>
+
+
+
+  </view>
+</view>

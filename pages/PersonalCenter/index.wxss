@@ -1,7 +1,6 @@
 /* pages/PersonalCenter/index.wxss */
 /* 覆盖全局样式，设置为白色背景或其他你想要的颜色 */
 page {
-  background: rgb(215, 240, 222); /* 或者设置为其他你需要的颜色 */
   overflow: hidden; /* 禁用页面滚动 */
 }
 .container {

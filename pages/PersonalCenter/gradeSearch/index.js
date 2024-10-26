@@ -1,12 +1,13 @@
 // pages/PersonalCenter/gradeSearch/index.js
 Page({
 
-  /**
-   * 页面的初始数据
-   */
   data: {
-
-  },
+    curfId: 1,
+    brandList: [{name: "2024-2023上学期" ,id: 1},
+      {name: "2025-2023下学期" ,id: 2},
+      {name: "2026-2023上学期" ,id: 3}],
+      curBrandName:"全部" ,
+    },
 
   /**
    * 生命周期函数--监听页面加载

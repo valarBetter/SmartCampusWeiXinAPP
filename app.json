@@ -10,7 +10,15 @@
     "pages/CampusInformation/index",
     "pages/PersonalCenter/courseList/index",
     "pages/PersonalCenter/gradeSearch/index",
-    "pages/PersonalCenter/personalMessage/index"
+    "pages/PersonalCenter/personalMessage/index",
+    "components/my_select/index",
+    "pages/CampusServices/schoolcard/index",
+    "pages/CampusServices/booksearch/index",
+    "pages/CampusServices/phonesearch/index",
+    "pages/CampusServices/schoolintroduce/index",
+    "pages/CampusServices/websiteindex/index",
+    "pages/CampusServices/schoolmap/index",
+    "pages/CampusServices/selectCourse/index"
   ],
   "window": {
     "navigationBarTextStyle": "black",
@@ -18,7 +26,6 @@
     "navigationBarBackgroundColor": "#ffffff",
     "navigationStyle": "custom"
   },
-  "style": "v2",
   "componentFramework": "glass-easel",
   "sitemapLocation": "sitemap.json",
   "lazyCodeLoading": "requiredComponents",

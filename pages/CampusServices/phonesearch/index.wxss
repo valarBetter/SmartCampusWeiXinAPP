@@ -1,0 +1,76 @@
+/* pages/CampusServices/phonesearch/index.wxss */
+.container {
+  display: flex; 
+  flex-direction: column; /* 子元素垂直排列 */
+  align-items: center;
+  height: 100vh;
+}
+.header{
+  display: flex; 
+  flex-direction: row;
+  width: 100%;
+  height: 7%;
+  margin-top: 20rpx; 
+  align-items: center; /*垂直居中*/
+  justify-content: space-between; /* 子元素左右两端对齐 */
+}
+
+.input {
+  width: 50%;
+  padding: 15rpx; 
+  border-radius: 50rpx;
+  border: 1rpx solid #dcdcdc; 
+  font-size: 28rpx; 
+  background-color: #ffffff;
+  margin-left: 50rpx;
+}
+.login-button {
+  background-color: rgba(57, 163, 100, 1);
+  color: #ffffff;
+  border-radius: 15rpx; 
+  font-size: 30rpx; 
+  text-align: center;
+  margin-left: 30rpx;
+  margin-right: 100rpx;
+}
+
+
+
+.function-box {
+  display: flex; 
+  flex-direction: column;
+  background-color: #ffffff; 
+  width: 100%;
+  border-radius: 10rpx;
+  margin-top: 20rpx; 
+  align-items: center; /*垂直居中*/
+  justify-items: center;
+}
+.list{
+  display: flex; 
+  flex-direction: column;
+  width: 100%;
+  align-items: center; /*垂直居中*/
+}
+.list-box{
+  display: flex; 
+  flex-direction: row;
+  width: 90%;
+  height: 100rpx;
+  align-items: center; /*垂直居中*/
+}
+.phoneicon{
+  width: 75rpx;
+  height: 75rpx;
+}
+.textname{
+  width: 80%;
+  font-size: 35rpx;
+  margin-left: 30rpx;
+}
+.transverseLine{
+  background: #cdd1c5;
+  width: 100%;
+  height: 3rpx;
+  margin-top: auto;
+}

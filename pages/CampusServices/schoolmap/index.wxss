@@ -1,0 +1,36 @@
+/* pages/CampusServices/schoolmap/index.wxss */
+.container {
+  display: flex; 
+  flex-direction: column; /* 子元素垂直排列 */
+  align-items: center;
+  height: 100vh;
+}
+
+.function-box {
+  display: flex; 
+  flex-direction: column;
+  background-color: #ffffff; 
+  width: 90%;
+  height: 600rpx;
+  border-radius: 30rpx;
+  margin-top: 40rpx;
+  align-items: center;
+}
+.header{
+  font-size: 35rpx;
+  margin-top: 10rpx;
+}
+.introduce{
+  margin-top: 20rpx;
+  height: 450rpx;
+  width: 90%;
+}
+.login-button {
+  background-color: rgba(57, 163, 100, 1);
+  color: #ffffff;
+  border-radius: 15rpx; 
+  font-size: 30rpx; 
+  text-align: center;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
