@@ -1,6 +1,6 @@
 /* pages/CampusServices/index.wxss */
 page {
-  background-attachment: scroll; /* 允许背景跟随页面滚动 */
+  overflow: hidden; /* 禁用页面滚动 */
 }
 .container {
   display: flex; 

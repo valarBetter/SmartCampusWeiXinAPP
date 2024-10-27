@@ -67,7 +67,7 @@ page {
 }
 
 .change-button{
-  padding: 30rpx; /* 按钮内边距，使文本内容离按钮边框有足够的空间 */
+  padding: 15rpx; /* 按钮内边距，使文本内容离按钮边框有足够的空间 */
   background-color:rgba(57, 163, 100, 1); /* 按钮的背景颜色为绿色 */
   color: #ffffff; /* 按钮文字的颜色为白色 */
   border-radius: 15rpx; /* 按钮的圆角边框，边角半径为 10rpx */

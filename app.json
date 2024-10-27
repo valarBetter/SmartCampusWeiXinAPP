@@ -18,7 +18,8 @@
     "pages/CampusServices/schoolintroduce/index",
     "pages/CampusServices/websiteindex/index",
     "pages/CampusServices/schoolmap/index",
-    "pages/CampusServices/selectCourse/index"
+    "pages/CampusServices/selectCourse/index",
+    "pages/CampusInformation/details/index"
   ],
   "window": {
     "navigationBarTextStyle": "black",

@@ -1,3 +1,37 @@
 <!--pages/CampusInformation/index.wxml-->
 <custom-header title="校园信息"></custom-header>
-<text>CCCCCCCCCCCCCCCCCC</text>
+<view class="container">
+  <view class="header">
+    <input class="input" placeholder="请输入书名或者作者" bindinput="onInputAccount"/>
+    <button class="login-button" bindtap="goToPersonalCenter" style="width:20%">查询</button>
+  </view>
+  <view class="select-box">
+    <view class="select-time">
+      test
+    </view>
+    <view class="select-class">
+      test
+    </view>
+  </view>
+
+
+
+  <view class="function-box" bind:tap="gotoDetails">
+    <view class="box">
+      <view class="box1">
+        <image src="../../icon/tapline.png" class="icon"></image>
+        <text class="notice-class-name">体育赛事</text>
+      </view>
+      <text class="title">校运会通知</text>
+      <text class="contain">为了增强学生体质</text>
+      <view class="box2">
+        <text class="root">学生处</text>
+        <text class="posttime">2024-10-20</text>
+      </view>
+    </view>
+    <view class="picture">
+        
+    </view>
+  </view>
+
+</view>
