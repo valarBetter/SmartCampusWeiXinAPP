@@ -73,7 +73,7 @@
  
 .select_view .active {
   width: 240rpx;/*下拉框的选项被选择后的宽度*/
-  height: 90rpx;
+  height: 70rpx;
   background: #F9F9F9;
   font-size: 32rpx;
   font-family: PingFang SC-Regular, PingFang SC;
@@ -87,12 +87,12 @@
  
 .select_view .normal {
   width: 240rpx;/*下拉框的选项未选择宽度*/
-  height: 90rpx;
+  height: 70rpx;
   border-radius: 16rpx 16rpx 16rpx 16rpx;
   opacity: 1;
   font-size: 32rpx;
   font-family: PingFang SC-Regular, PingFang SC;
-  color: #000000;
+  color: rgba(42, 130, 228, 1);
   line-height: 38rpx;
   display: flex;
   justify-content: center;
