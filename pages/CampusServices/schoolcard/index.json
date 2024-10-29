@@ -1,7 +1,7 @@
 {
   "usingComponents": {
     "van-icon": "@vant/weapp/icon/index",
-    "select-postSale":"/components/my_select/index"
+    "select-postSale":"/components/select_month/index"
   },
   "navigationStyle": "custom"
 }

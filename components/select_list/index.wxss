@@ -1,5 +1,4 @@
-/* components/my_select/index.wxss */
-
+/* components/select_list/index.wxss */
 .select_all_view {
   display: flex;
   z-index: 999;
@@ -25,7 +24,7 @@
   padding: 4rpx 0rpx 10rpx 10rpx;
   /* color: #252525;
   font-weight: 400; */
-  border-radius: 10rpx;
+  border-radius: 20rpx;
   position: relative;
   overflow: hidden;
   text-overflow: ellipsis;

@@ -13,20 +13,20 @@ page {
   display: flex; 
   flex-direction: row;
   width: 85%;
-  height: 250rpx;
+  height: 110rpx;
   margin-top: 20rpx;
 }
 .select-time{
-  width: 45%;
-  height: 100%;
+  width: 40%;
+  height: 80%;
   margin-right: 5%;
   background-color: #ffffff; 
   border-radius: 20rpx;
 }
 .select-class{
-  width: 45%;
-  height: 100%;
-  margin-left: 5%;
+  width: 40%;
+  height: 80%;
+  margin-left: 11.5%;
   background-color: #ffffff; 
   border-radius: 20rpx;
 }

@@ -1,5 +1,5 @@
 <!--pages/login/ResetPassword/index.wxml-->
-<custom-header title="智慧校园"></custom-header>
+<custom-header1 title="智慧校园"></custom-header1>
 <view class="container">
 
   <view class="reset-box">

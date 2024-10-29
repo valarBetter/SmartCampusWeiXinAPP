@@ -7,10 +7,10 @@
   </view>
   <view class="select-box">
     <view class="select-time">
-      test
+      <select-postSale nowId="{{curfId}}" nameList="{{brandList}}" nowName="{{curBrandName}}" placeholder="请选择品牌" bind:handleChange="changeBrand"></select-postSale>
     </view>
     <view class="select-class">
-      test
+      <select-postSale nowId="{{curfId}}" nameList="{{brandList}}" nowName="{{curBrandName}}" placeholder="请选择品牌" bind:handleChange="changeBrand"></select-postSale>
     </view>
   </view>
 

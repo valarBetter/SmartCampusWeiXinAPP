@@ -1,4 +1,4 @@
-/* components/Header/index.wxss */
+/* components/Header1/index.wxss */
 .header-wrap { 
   width: 100%; 
   /* 设置导航栏外层容器的宽度为100%，确保在不同屏幕上都能自适应。 */
@@ -72,7 +72,7 @@
 }
 .title {
   font-size: 36rpx; /* 标题的字体大小 */
-  color: #110f0f; /* 标题的文字颜色为白色 */
+  color: #ffffff; /* 标题的文字颜色为白色 */
 }
 .button-back{
   width: 45rpx;  

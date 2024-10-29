@@ -1,66 +1,49 @@
-// pages/login/register/index.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    selectcontent: [],
+    changable: false, // 箭头切换
+    select: undefined, // 选中的值
+    selectId: undefined, // 选中的id
+    placeholder: "请选择", // 默认占位符
+    nameList: [
+      { id: 1, name: "选项1" },
+      { id: 2, name: "选项2" },
+      { id: 3, name: "选项3" }
+    ], // 示例数据源
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad(options) {
-
+  onLoad: function () {
+    this.processData();
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
-
+  // 下拉框收起和展开
+  startChange(e) {
+    this.setData({
+      changable: !this.data.changable
+    });
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow() {
-
+  // 选择数据后回显
+  changecontent(e) {
+    this.setData({
+      select: e.currentTarget.dataset.datavalue.name,
+      selectId: e.currentTarget.dataset.datavalue.id,
+      changable: false
+    });
+    this.triggerEvent("handleChange", { selectId: this.data.selectId, select: this.data.select }); // 向父组件传参
   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage() {
-
+  // 处理数据
+  processData() {
+    let options = [];
+    this.data.nameList.forEach((item) => {
+      options.push({
+        id: item.id,
+        name: item.name,
+      });
+    });
+    this.setData({
+      selectcontent: options,
+    });
   }
-})
+});

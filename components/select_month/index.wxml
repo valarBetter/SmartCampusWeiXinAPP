@@ -1,4 +1,4 @@
-<!--components/my_select/index.wxml-->
+<!--components/select_month/index.wxml-->
 <view class="select_all_view">
  <view class="select_view">
   <!-- 输入框 -->
@@ -20,5 +20,3 @@
   </view>
  </view>
 </view>
- 
- 

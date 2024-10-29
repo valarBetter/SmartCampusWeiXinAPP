@@ -2,7 +2,7 @@
 .text{
   text-align: left; 
   margin-left: 10%;
-  margin-right: 30%;
+  margin-right: 50%;
 }
 
 .container {

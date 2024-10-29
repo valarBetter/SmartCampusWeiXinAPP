@@ -19,7 +19,10 @@
     "pages/CampusServices/websiteindex/index",
     "pages/CampusServices/schoolmap/index",
     "pages/CampusServices/selectCourse/index",
-    "pages/CampusInformation/details/index"
+    "pages/CampusInformation/details/index",
+    "components/Header1/index",
+    "components/select_list/index",
+    "components/select_month/index"
   ],
   "window": {
     "navigationBarTextStyle": "black",
@@ -31,7 +34,8 @@
   "sitemapLocation": "sitemap.json",
   "lazyCodeLoading": "requiredComponents",
   "usingComponents": {
-    "custom-header": "./components/Header/index"
+    "custom-header": "./components/Header/index",
+    "custom-header1": "./components/Header1/index"
   },
   "tabBar": {
     "color": "#333",
