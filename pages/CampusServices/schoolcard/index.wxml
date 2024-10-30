@@ -1,0 +1,64 @@
+<!--pages/CampusServices/schoolcard/index.wxml-->
+<custom-header title="校园卡消费记录"></custom-header>
+<view class="container">
+  <view class="function-box">
+    <view class="text">筛选</view>
+    <select-postSale nowId="{{curfId}}" nameList="{{brandList}}" nowName="{{curBrandName}}" placeholder="请选择品牌" bind:handleChange="changeBrand"></select-postSale>
+
+  </view>
+  <view class="list-box">
+    <!-- 内容 -->
+    <view class="list">
+      <!-- 上半部分 -->
+      <view class="box1">
+        <!-- 时间还有消费名称 -->
+        <view class="box2">
+          <text>消费-校园卡</text>
+          <view class="box3">
+            <text>支付时间</text>
+            <text class="box4">2024-10-12 10:20</text>
+          </view>
+        </view>
+        <!-- 花费金额 -->
+        <view class="cost">
+          <text>-</text>
+          <text>1.00</text>
+          <text>元</text>
+        </view>
+      </view>
+      <!-- 线 -->
+      <view class="transverseLine"></view>
+
+    </view>
+    <!-- 内容 -->
+    <view class="list">
+      <!-- 上半部分 -->
+      <view class="box1">
+        <!-- 时间还有消费名称 -->
+        <view class="box2">
+          <text>消费-校园卡</text>
+          <view class="box3">
+            <text>支付时间</text>
+            <text class="box4">2024-10-12 10:20</text>
+          </view>
+        </view>
+        <!-- 花费金额 -->
+        <view class="cost">
+          <text>-</text>
+          <text>1.00</text>
+          <text>元</text>
+        </view>
+      </view>
+      <!-- 线 -->
+      <view class="transverseLine"></view>
+
+    </view>
+  </view>
+</view>
+
+
+
+
+
+
+

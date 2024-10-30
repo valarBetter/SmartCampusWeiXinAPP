@@ -1,0 +1,82 @@
+/* components/Header1/index.wxss */
+.header-wrap { 
+  width: 100%; 
+  /* 设置导航栏外层容器的宽度为100%，确保在不同屏幕上都能自适应。 */
+}
+.header-wrap .nav-bar { 
+  width: 100%; 
+  /* 设置导航栏的宽度为100%，保持与父容器一致，确保导航栏填满整个顶部。 */
+}
+.header-fixed-wrap { 
+  width: 100%; 
+  background-color: transparent;  
+  /* 将背景颜色设为透明，让导航栏的背景继承页面背景的渐变效果。 */
+  /* border-bottom: 1px solid #cccccc;  
+  /* 设置导航栏底部边框颜色为浅灰色，增加与页面其他部分的分隔感。 */
+  position: fixed;  
+  /* 将导航栏设置为固定定位，保证导航栏始终显示在页面顶部，不随页面滚动而移动。 */
+  left: 0;  
+  top: 0;  
+  /* 将导航栏固定在页面的左上角。 */
+  z-index: 1000;  
+  /* 设置较高的z-index值，确保导航栏在所有内容的最上层显示。 */
+}
+.header-fixed-wrap .flex-box { 
+  width: 100%;  
+  height: 80rpx;  
+  display: flex;  
+  flex-direction: row;  
+  flex-wrap: wrap;  
+  justify-content: space-between;  
+  align-items: center;  
+  /* 使用flex布局，让导航栏内的元素在一行内水平排列，并保持在垂直方向居中，内容之间均匀分布。 */
+}
+.header-fixed-wrap .left, .header-fixed-wrap .right { 
+  flex: 2;  
+  /* 左右两侧的按钮区域占比为2，保持左右两侧宽度一致。 */
+}
+.header-fixed-wrap .middle { 
+  flex: 5;  
+  /* 中间区域占比为5，确保标题部分占据更多空间。 */
+}
+.header-fixed-wrap .left .btn-back { 
+  width: 80rpx;  
+  height: 60rpx;  
+  line-height: 60rpx;  
+  font-size: 28rpx;  
+  font-weight: normal;  
+  padding: 0;  
+  background: none;  
+  /* 设置返回按钮的样式，包括宽高、字体大小、行高，使按钮居中显示，并移除默认的背景色和边距。 */
+}
+.header-fixed-wrap .middle .title { 
+  width: 80%;  
+  text-align: center;  
+  white-space: nowrap;  
+  overflow: hidden;  
+  text-overflow: ellipsis;  
+  margin: 0 auto;  
+  /* 设置标题的样式，确保标题文字居中显示，过长时会显示省略号，同时保持标题的宽度不超过父容器的80%。 */
+}
+/* 填充导航栏区域高度占位块 样式 */
+.empty-header-wrap { 
+  width: 100%;  
+  position: relative;  
+  z-index: 1;  
+  /* 设置占位块的宽度为100%，确保与父容器等宽，并且使用相对定位保证导航栏内容不受影响。 */
+}
+.empty-header-wrap .empty-box { 
+  width: 100%;  
+  height: 80rpx;  
+  /* 设置一个占位的空白块，确保导航栏下方有足够的高度空白区域，以免页面内容与导航栏重叠。 */
+}
+.title {
+  font-size: 36rpx; /* 标题的字体大小 */
+  color: #ffffff; /* 标题的文字颜色为白色 */
+}
+.button-back{
+  width: 45rpx;  
+  height: 45rpx;  
+  margin-top: 10rpx;
+  margin-left: 5rpx;
+}

@@ -1,0 +1,100 @@
+/* components/select_list/index.wxss */
+.select_all_view {
+  display: flex;
+  z-index: 999;
+  width: 254rpx;/*框的背景宽度*/
+  height: 82rpx;
+  background: #F9F9F9;
+  border-radius: 12rpx 12rpx 12rpx 12rpx;
+  opacity: 1;
+}
+ 
+.select_view {
+  display: inline;
+  /* width: 200rpx;
+  height: 64rpx; */
+}
+ 
+.inputPlaceholder {
+  min-width: 264rpx;/*框的宽度*/
+  height: 82rpx;
+  background: #F9F9F9;
+  border: 2rpx solid #F9F9F9;
+  border-radius: 12rpx 12rpx 12rpx 12rpx;
+  padding: 4rpx 0rpx 10rpx 10rpx;
+  /* color: #252525;
+  font-weight: 400; */
+  border-radius: 20rpx;
+  position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 32rpx;
+  font-family: PingFang SC-Regular, PingFang SC;
+  color: #000000;
+  line-height: 38rpx;
+}
+ 
+.select_view .inputPlaceholder .text {
+  height: 40rpx;
+  position: relative;
+  top: 30rpx;
+  left: 24rpx;
+}
+ 
+.icon {
+  position: absolute;
+  right: 24rpx;
+  top: 30rpx;
+}
+ 
+.content {
+  position: absolute;
+  z-index: 999;
+  min-width: 200rpx;/*下拉框的最小宽度*/
+  max-height: 516rpx;
+  background: #F9F9F9;
+  box-shadow: 0rpx 12rpx 32rpx 0rpx rgba(0, 0, 0, 0.08), 0rpx 6rpx 12rpx -8rpx rgba(0, 0, 0, 0.12), 0rpx 18rpx 56rpx 16rpx rgba(0, 0, 0, 0.05);
+  border-radius: 16rpx 16rpx 16rpx 16rpx;
+  opacity: 1;
+  margin-top: 8rpx;
+  padding: 20rpx;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+ 
+.content>.inputPlaceholder {
+  padding: 10rpx 0;
+}
+ 
+.select_view .active {
+  width: 240rpx;/*下拉框的选项被选择后的宽度*/
+  height: 70rpx;
+  background: #F9F9F9;
+  font-size: 32rpx;
+  font-family: PingFang SC-Regular, PingFang SC;
+  font-weight: 600;
+  color: #000000;
+  line-height: 38rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ 
+.select_view .normal {
+  width: 240rpx;/*下拉框的选项未选择宽度*/
+  height: 70rpx;
+  border-radius: 16rpx 16rpx 16rpx 16rpx;
+  opacity: 1;
+  font-size: 32rpx;
+  font-family: PingFang SC-Regular, PingFang SC;
+  color: rgba(42, 130, 228, 1);
+  line-height: 38rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,3 +1,65 @@
 <!--pages/PersonalCenter/index.wxml-->
 <custom-header title="个人中心"></custom-header>
-<text>AAAAAAAAAAAAA</text>
+<view class="container">
+  <view class="header">
+    <image src="../../icon/personalpicture.png" class="personalpicture"></image>
+    <view class="informationbox">
+      <view class="personalname">{{personalname}}</view>
+      <view class="minbox">
+        <view class="studentno">{{studentno}}</view>
+        <view class="divLine"></view>
+        <view class="profession">{{profession}}</view>
+      </view>
+    </view>
+  </view>
+
+
+
+
+
+
+
+  <view class="function-box">
+    <view class="tabbox">
+      <view class="subtabbox" bind:tap="gotoPersonalMessage">
+        <image src="../../icon/personalMessage.png" class="iconpicture"></image>
+        <view class="subtabnamebox">
+          <text class="subtabname">个人信息</text>
+        </view>
+        <image src="../../icon/next.png" class="gotoicon">icons</image>
+      </view> 
+      <view class="transverseLine"></view>
+      <view class="subtabbox" bind:tap="gotoCourseList">
+        <image src="../../icon/courseList.png" class="iconpicture"></image>
+        <view class="subtabnamebox">
+          <view class="subtabname">课程表</view>
+        </view>
+        <image src="../../icon/next.png" class="gotoicon">icons</image>
+      </view>
+      <view class="transverseLine"></view>
+      <view class="subtabbox" bind:tap="gotoGradeSearch">
+        <image src="../../icon/list.png" class="iconpicture"></image>
+        <view class="subtabnamebox">
+          <view class="subtabname">成绩查询</view>
+        </view>
+        <image src="../../icon/next.png" class="gotoicon">icons</image>
+      </view>
+      <view class="transverseLine"></view>
+    </view> 
+  </view>
+  <view class="function-box1" >
+    <view class="tabbox1">
+      <view class="subtabbox1">
+        <image src="../../icon/loginout.png" class="iconpicture"></image>
+        <view class="subtabnamebox">
+          <text class="subtabname" bind:tap="backEvent">退出</text>
+        </view>
+      </view> 
+    </view> 
+  </view>
+
+
+
+
+
+</view>

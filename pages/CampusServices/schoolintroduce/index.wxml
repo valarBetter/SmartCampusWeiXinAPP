@@ -1,0 +1,21 @@
+<!--pages/CampusServices/schoolintroduce/index.wxml-->
+<custom-header title="学校简介"></custom-header>
+<view class="container">
+  <view class="function-box">
+    <view class="header">
+      测试
+    </view>
+    <view class="introduce">
+      有外媒记者提问：据报道，有数千名朝鲜士兵正在俄罗斯训练，并且可能会被派往乌克兰作战。中方能否确认这一消息？林剑：我们这几天已经反复地就这个问题阐述了中方立场，中方不了解相关情况。对于乌克兰危机，中方的立场是一贯的、明确的，我们始终主张各方要推动局势缓和，致力于政治解决。
+    </view>
+  </view>
+  <view class="function-box">
+    <view class="header">
+      测试
+    </view>
+    <view class="introduce">
+      有外媒记者提问：据报道，有数千名朝鲜士兵正在俄罗斯训练，并且可能会被派往乌克兰作战。中方能否确认这一消息？林剑：我们这几天已经反复地就这个问题阐述了中方立场，中方不了解相关情况。对于乌克兰危机，中方的立场是一贯的、明确的，我们始终主张各方要推动局势缓和，致力于政治解决。
+    </view>
+  </view>
+
+</view>

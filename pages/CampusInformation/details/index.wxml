@@ -1,0 +1,14 @@
+<!--pages/CampusInformation/details/index.wxml-->
+<custom-header title="通知详情"></custom-header>
+<view class="container">
+  <view class="function-box">
+    <text class="title">校运会通知</text>
+    <view class="posttime">
+      <text class="time">2024-10-27 20:20:22</text>
+    </view>
+    <view class="details">这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容</view>
+    <view class="postman">
+      <text class="namea">学生会</text>
+    </view>
+  </view>
+</view>

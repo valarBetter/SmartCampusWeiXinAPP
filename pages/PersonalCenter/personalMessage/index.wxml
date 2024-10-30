@@ -1,0 +1,60 @@
+<!--pages/PersonalCenter/personalMessage/index.wxml-->
+<custom-header title="个人信息"></custom-header>
+<view class="container">
+  <view class="header">
+    <image src="../../icon/personalpicture.png" class="personalpicture"></image>
+  </view>
+
+  <view class="function-box">
+    <view class="tabbox">
+      <view class="subtabbox" >
+        <view class="key">姓名：</view>
+        <view class="value">{{personalname}}</view>
+      </view> 
+      <view class="transverseLine"></view>
+      <view class="subtabbox" >
+        <view class="key">学号：</view>
+        <view class="value">{{studentno}}</view>
+      </view> 
+      <view class="transverseLine"></view>
+      <view class="subtabbox" >
+        <view class="key">年级：</view>
+        <view class="value">{{calss}}</view>
+      </view> 
+      <view class="transverseLine"></view>
+      <view class="subtabbox" >
+        <view class="key">专业：</view>
+        <view class="value">{{profession}}</view>
+      </view> 
+      <view class="transverseLine"></view>
+      <view class="subtabbox" >
+        <view class="key">性别：</view>
+        <view class="value">{{gender}}</view>
+      </view> 
+      <view class="transverseLine"></view>
+      <view class="subtabbox" >
+        <view class="key">联系方式：</view>
+        <view class="value">{{phone}}</view>
+      </view> 
+      <view class="transverseLine"></view>
+      <button class="change-button" bindtap="changePopupView" style="width:40%">修改信息</button>
+    </view> 
+  </view>
+  <!-- 弹出层 -->
+  <view class="popupView" wx:if="{{ popupView }}">
+    <!-- 遮罩区域，点击隐藏弹出层 -->
+    <view class="close" bindtap="changePopupView"></view> 
+    <!-- 内容区 -->
+    <view class="content">
+      <view class="input-box">
+        <view class="logintext">原密码</view>
+        <input class="input" placeholder="请输入原密码" bindinput="onInputAccount"/>
+      </view>
+      <view class="input-box">
+        <view class="logintext">新联系方式</view>
+        <input class="input" placeholder="请输入新联系方式" bindinput="onInputAccount"/>
+      </view>
+      <button class="change-button"  style="width:40%">点击修改</button>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,48 @@
+/* pages/CampusServices/websiteindex/index.wxss */
+.container {
+  display: flex; 
+  flex-direction: column; /* 子元素垂直排列 */
+  align-items: center;
+  height: 100vh;
+}
+
+
+
+
+.function-box {
+  display: flex; 
+  flex-direction: column;
+  background-color: #ffffff; 
+  width: 100%;
+  border-radius: 10rpx;
+  margin-top: 40rpx; 
+  align-items: center; /*垂直居中*/
+  justify-items: center;
+}
+.list{
+  display: flex; 
+  flex-direction: column;
+  width: 100%;
+  align-items: center; /*垂直居中*/
+}
+.list-box{
+  display: flex; 
+  flex-direction: row;
+  width: 90%;
+  height: 100rpx;
+  align-items: center; /*垂直居中*/
+}
+.phoneicon{
+  font-size: 35rpx;
+}
+.textname{
+  width: 80%;
+  font-size: 35rpx;
+  margin-left: 5rpx;
+}
+.transverseLine{
+  background: #cdd1c5;
+  width: 90%;
+  height: 3rpx;
+  margin-top: auto;
+}

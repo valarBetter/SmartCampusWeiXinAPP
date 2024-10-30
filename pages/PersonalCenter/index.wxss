@@ -1,6 +1,137 @@
 /* pages/PersonalCenter/index.wxss */
 /* 覆盖全局样式，设置为白色背景或其他你想要的颜色 */
 page {
-  background: rgb(215, 240, 222); /* 或者设置为其他你需要的颜色 */
-  background-attachment: scroll; /* 允许背景跟随页面滚动 */
+  overflow: hidden; /* 禁用页面滚动 */
+}
+.container {
+  display: flex; /* 使用 flex 布局，使子元素可以自由排列 */
+  flex-direction: column; /* 子元素垂直排列 */
+  align-items: center; /* 子元素水平居中 */
+  height: 100vh; /* 高度为视口高度的 100% */
+}
+
+/* 头部的标题和问候 */
+.header {
+  display: flex; 
+  flex-direction: row;
+  margin: 10rpx 30rpx 10rpx 10rpx; /* 顶部的外边距，提供空间使内容向下移动 */
+  width: 85%; 
+}
+.personalpicture{
+  width: 150rpx;  
+  height: 150rpx;  
+}
+.informationbox{
+  display: flex; 
+  flex-direction: column;
+  margin-left: 20rpx;
+}
+.personalname{
+  font-size: 55rpx;
+}
+.minbox{
+  display: flex; 
+  flex-direction: row; 
+}
+.studentno{
+  margin-top: 10rpx;
+}
+.profession{
+  margin-top: 10rpx;
+}
+
+/* 竖线分割线样式 */
+.divLine {
+  margin-top: 15rpx;
+  margin-left: 5rpx;
+  margin-right: 5rpx;
+  background: #404439;
+  width: 5rpx; /* 宽度设为小值，形成竖线 */
+  height: 70%; /* 高度设置为占据父元素的全部高度 */
+}
+
+
+
+
+
+
+.function-box {
+  display: flex; 
+  flex-direction: column;
+  background-color: #ffffff; /* 登录框的背景颜色为白色 */
+  width: 85%; /* 登录框占页面宽度的 80% */
+  border-radius: 40rpx; /* 设置圆角为 20rpx，使其边角变圆 */
+  height: 30%;
+  margin-top: 10rpx; /* 顶部外边距，使登录框与上方元素有间距 */
+  align-items: center; /* 子元素水平居中 */
+}
+.tabbox{
+  display: flex; 
+  flex-direction: column;
+  width: 90%;
+  height: 100%;
+  margin-top: 20rpx;
+  margin-bottom: 40rpx;
+}
+.subtabbox{
+  display: flex; 
+  flex-direction: row; 
+  height: 20%;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx; /* 顶部外边距，使登录框与上方元素有间距 */
+}
+.iconpicture{
+  width: 12%;
+  height: 100%;
+}
+
+.subtabnamebox{
+  display: flex; 
+  flex-direction: column; 
+  width: 80%;
+  margin-left: 20rpx;
+  height: 100%;
+  justify-content: center; 
+}
+.subtabname{
+  font-size: 33rpx;
+}
+.transverseLine{
+  background: #cdd1c5;
+  width: 75%;
+  height: 1%;
+  margin-left: 75rpx;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+}
+.gotoicon{
+  width: 10%;
+  height: 100%;  
+}
+
+.function-box1 {
+  display: flex; 
+  flex-direction: column;
+  background-color: #ffffff; /* 登录框的背景颜色为白色 */
+  width: 85%; /* 登录框占页面宽度的 80% */
+  border-radius: 40rpx; /* 设置圆角为 20rpx，使其边角变圆 */
+  height: 10%;
+  margin-top: 35rpx; /* 顶部外边距，使登录框与上方元素有间距 */
+  align-items: center; /* 子元素水平居中 */
+}
+
+.subtabbox1{
+  display: flex; 
+  flex-direction: row; 
+  height: 100%;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx; /* 顶部外边距，使登录框与上方元素有间距 */
+}
+.tabbox1{
+  display: flex; 
+  flex-direction: column;
+  width: 90%;
+  height: 100%;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
 }

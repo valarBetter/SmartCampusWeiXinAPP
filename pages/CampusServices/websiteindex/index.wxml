@@ -1,0 +1,22 @@
+<!--pages/CampusServices/websiteindex/index.wxml-->
+<custom-header title="常用链接"></custom-header>
+<view class="container">
+  <view class="function-box">
+    <view class="list">
+      <view class="list-box">
+        <view class="phoneicon">1.</view>
+        <view class="textname">院长</view>
+      </view>
+      <view class="transverseLine"></view>
+    </view>
+
+    <view class="list">
+      <view class="list-box">
+        <view class="phoneicon">20.</view>
+        <view class="textname">院长</view>
+      </view>
+      <view class="transverseLine"></view>
+    </view>
+
+  </view>
+</view>
