@@ -11,6 +11,71 @@ Page({
       { id: 3, name: "选项3" }
     ], // 示例数据源
   },
+  rights: [
+    {
+      src: 'https://static.sprucesmart.com/hunanapp/turn/spring/5-oil-icon.png',
+      name: "昆仑润滑油 天润KR8全...",
+      id: 1,
+      num: 122,
+      price: 188
+    },
+    {
+      src: 'https://static.sprucesmart.com/hunanapp/turn/spring/5-oil-icon.png',
+      name: "商品二",
+      id: 2,
+      num: 123,
+      price: 18
+    },
+    {
+      src: 'https://static.sprucesmart.com/hunanapp/turn/spring/5-oil-icon.png',
+      name: "商品三",
+      id: 3,
+      num: 124,
+      price: 99
+    },
+    {
+      src: 'https://static.sprucesmart.com/hunanapp/turn/spring/5-oil-icon.png',
+      name: "商品一",
+      id: 1,
+      num: 122,
+      price: 188
+    },
+    {
+      src: 'https://static.sprucesmart.com/hunanapp/turn/spring/5-oil-icon.png',
+      name: "商品二",
+      id: 2,
+      num: 123,
+      price: 18
+    },
+    {
+      src: 'https://static.sprucesmart.com/hunanapp/turn/spring/5-oil-icon.png',
+      name: "商品三",
+      id: 3,
+      num: 124,
+      price: 99
+    },
+    {
+      src: 'https://static.sprucesmart.com/hunanapp/turn/spring/5-oil-icon.png',
+      name: "商品一",
+      id: 1,
+      num: 122,
+      price: 188
+    },
+    {
+      src: 'https://static.sprucesmart.com/hunanapp/turn/spring/5-oil-icon.png',
+      name: "商品二",
+      id: 2,
+      num: 123,
+      price: 18
+    },
+    {
+      src: 'https://static.sprucesmart.com/hunanapp/turn/spring/5-oil-icon.png',
+      name: "商品三",
+      id: 3,
+      num: 124,
+      price: 99
+    }
+  ],
 
   onLoad: function () {
     this.processData();

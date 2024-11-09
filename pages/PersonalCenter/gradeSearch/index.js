@@ -23,7 +23,7 @@ Page({
       data: {
         userId: userId,
         semester: semester
-      },
+      }, 
       success: (res) => {
         console.log(res.data); // 打印返回的 data 对象
         console.log(res.status);

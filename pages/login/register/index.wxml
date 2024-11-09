@@ -1,25 +1,46 @@
-<!--pages/login/register/index.wxml-->
-<custom-header1 title="智慧校园"></custom-header1>
+
+
 <view class="container">
-  <view class="select_all_view">
-    <view class="select_view">
-      <!-- 输入框 -->
-      <view class="inputPlaceholder" bindtap="startChange">
-        <text class="text" wx:if='{{select}}'>{{select}}</text>
-        <text class="text" wx:else>{{placeholder}}</text>
-        <view class="icon" wx:if='{{changable}}'>
-          <van-icon name="arrow-down" />
+  <custom-header title="成绩查询"></custom-header>
+    <view class="top-box">
+        <!-- 搜索 -->
+        <view class="search-box">
+            <view class="search-icon"></view>
+            <input class="search-input" value="" type="text" placeholder="搜索您要采购的商品" placeholder-style="" placeholder-class="input-placeholder" bindinput="getGoodsFunc" />
         </view>
-        <view class="icon" wx:else>
-          <van-icon name="arrow" />
-        </view>
-      </view>
-      <!-- 下拉展开后的可选择内容 -->
-      <view class="content" wx:if='{{changable}}'>
-        <view class="{{item.id == selectId ? 'active' : 'normal'}}" wx:for="{{selectcontent}}" wx:key="id" bindtap="changecontent" data-datavalue="{{item}}">
-          {{item.name}}
-        </view>
-      </view>
     </view>
-  </view>
+    <view class="middle-box">
+        <scroll-view scroll-y scroll-with-animation scroll-into-view="{{toTitle}}" class="good-item">
+            <block>
+                <view class="goods-box">
+                    <view wx:for="{{rights}}" wx:key="index" wx:for-item="item" class="goods" id="scroll-{{index}}">
+                        <image class="good-img" src="{{item.src}}" bindtap="goGoodsDetailFunc" data-id="{{item.id}}"></image>
+                        <view>
+                            <view class="goods-name">{{item.title}}</view>
+                            <view class="good-add">
+                                <view class="goods-price">
+                                    <span class="dollar">￥</span>
+                                    <span>{{item.sales_price}}</span>
+                                </view>
+                                <view class="big-card-box" catchtap="addGoodsFunc" data-id="{{item.id}}" data-num="{{item.num}}" data-item="{{item}}">
+                                    <view class="add-card"></view>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </block>
+        </scroll-view>
+    </view>
+    <!-- 加入购物车 -->
+    <view class="add-card-box">
+        <view class="add-card-left" catchtap="goCardFunc">
+            <view class="dot" animation='{{ani}}' hidden="{{!showdot}}">+1</view>
+            <span class="num" wx:if="{{cardNum > 0}}">{{cardNum}}</span>
+            <view class="card-icon" id="shopcar"></view>
+            <view>购物车</view>
+        </view>
+        <view class="add-card-right" bindtap="submitOrderFunc" wx:if="{{cardNum > 0}}">提交订单</view>
+        <view class="add-card-right1" wx:else>提交订单</view>
+    </view>
 </view>

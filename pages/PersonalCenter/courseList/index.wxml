@@ -3,10 +3,10 @@
 <view class="container">
   <view class="select-box">
     <view class="select-time">
-      <select-postSale nowId="{{curfId}}" nameList="{{brandList}}" nowName="{{curBrandName}}" placeholder="请选择品牌" bind:handleChange="changeBrand"></select-postSale>
+      <select-postSale nowId="{{curfId1}}" nameList="{{brandList1}}" nowName="{{curBrandName1}}" placeholder="请选择学期" bind:handleChange="changeBrand1"></select-postSale>
     </view>
     <view class="select-class">
-      <select-postSale nowId="{{curfId}}" nameList="{{brandList}}" nowName="{{curBrandName}}" placeholder="请选择品牌" bind:handleChange="changeBrand"></select-postSale>
+      <select-postSale nowId="{{curfId2}}" nameList="{{brandList2}}" nowName="{{curBrandName2}}" placeholder="请选择周数" bind:handleChange="changeBrand2"></select-postSale>
     </view>
   </view>
 

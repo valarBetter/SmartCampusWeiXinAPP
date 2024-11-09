@@ -12,31 +12,28 @@ page {
 .header{
   display: flex; 
   flex-direction: row;
-  width: 100%;
+  width: 85%;
   height: 7%;
   margin-top: 20rpx; 
   align-items: center; /*垂直居中*/
   justify-content: space-between; /* 子元素左右两端对齐 */
+  background-color: #ffffff;
+  border-radius: 25rpx;
 }
-
+.searchicon{
+  width: 75rpx;
+  height: 75rpx;
+  margin-left: 20rpx;
+}
 .input {
-  width: 50%;
+  width: 90%;
   padding: 15rpx; 
-  border-radius: 50rpx;
-  border: 1rpx solid #dcdcdc; 
   font-size: 28rpx; 
   background-color: #ffffff;
-  margin-left: 50rpx;
+  margin-left: 10rpx;
+  border-radius: 25rpx;
 }
-.login-button {
-  background-color: rgba(57, 163, 100, 1);
-  color: #ffffff;
-  border-radius: 15rpx; 
-  font-size: 30rpx; 
-  text-align: center;
-  margin-left: 30rpx;
-  margin-right: 55rpx;
-}
+
 
 
 
