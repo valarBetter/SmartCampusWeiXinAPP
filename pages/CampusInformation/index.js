@@ -2,6 +2,7 @@
 Page({
   data: {
     curfId1: 1,
+    debounceTimer: null ,// 定时器变量
     curBrandName1: "选择日期",
     brandList1: [
       { name: "2023", id: 1 },
@@ -72,12 +73,24 @@ Page({
   
 
   onInputSearch(e) {
+    // 清除上一次的定时器
+    if (this.data.debounceTimer) {
+      clearTimeout(this.data.debounceTimer);
+    }
+  
+    // 设置新的定时器
+    const keyword = e.detail.value;
     this.setData({
-      searchKeyword: e.detail.value
-    }, () => {
-      this.fetchNotifications(wx.getStorageSync('studentId'));
+      debounceTimer: setTimeout(() => {
+        this.setData({
+          searchKeyword: keyword
+        }, () => {
+          this.fetchNotifications(wx.getStorageSync('studentId')); // 延迟执行请求
+        });
+      }, 300) // 300ms 的防抖时间，可根据需求调整
     });
   },
+  
 
   gotoDetails(e) {
     const id = e.currentTarget.dataset.id;
