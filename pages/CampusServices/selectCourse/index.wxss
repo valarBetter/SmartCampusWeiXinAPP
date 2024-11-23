@@ -1,4 +1,5 @@
 /* pages/CampusServices/selectCourse/index.wxss */
+/* pages/CampusServices/selectCourse/index.wxss */
 page {
   overflow: hidden; /*禁用页面滚动 */
   }
@@ -67,14 +68,10 @@ page {
   .value{
     margin-left: 10rpx;
   }
-  .ttt{
-    display: flex; 
-    flex-direction: column;
-    margin-left: 10rpx;
-  }
   .timelist{
     display: flex; 
     flex-direction: column;
+    margin-left: 10rpx;
   }
   .buttonbox{
     margin-left: auto;

@@ -3,7 +3,7 @@
 <view class="container">
   <view class="card-box" bind:tap="gotoSchoolCard">
     <view class="box1">
-      <image src="../../icon/personalpicture.png" class="personalpicture"></image>
+      <image src="../../icon/personalMessage.png" class="personalpicture"></image>
       <view class="informationbox">
         <view class="schoolname">{{schoolname}}</view>
         <view class="minbox">

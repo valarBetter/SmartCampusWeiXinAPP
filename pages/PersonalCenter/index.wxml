@@ -2,7 +2,7 @@
 <custom-header title="个人中心"></custom-header>
 <view class="container">
   <view class="header">
-    <image src="../../icon/personalpicture.png" class="personalpicture"></image>
+    <image src="../../icon/personalMessage.png" class="personalpicture"></image>
     <view class="informationbox">
       <view class="personalname">{{personalname}}</view>
       <view class="minbox">
