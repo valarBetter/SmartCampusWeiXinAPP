@@ -14,7 +14,7 @@ App({
     })
     wx.http = (url, method, data, callback) => {
       wx.request({
-        url: 'https://example.com' + url, //请求的接口地址
+        url: 'http://8.138.81.10:8080' + url, //请求的接口地址
         method: method,
         data: data || {},
         header: {

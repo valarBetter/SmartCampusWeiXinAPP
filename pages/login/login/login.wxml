@@ -1,4 +1,5 @@
 <custom-header1 title="智慧校园"></custom-header1>
+
 <view class="container">
   <view class="header">
     <text class="greeting">HI，</text>
@@ -15,12 +16,15 @@
 
     <view class="input-box">
       <view class="logintext">密码</view>
-      <input class="input" password="true" placeholder="请输入密码" bindinput="onInputPassword"/>
+      <input class="input" type="password" placeholder="请输入密码" bindinput="onInputPassword"/>
     </view>
+
     <view class="forgot-register">
       <text class="forgot-text" bindtap="goToResetPassword">忘记密码?</text>
       <text class="register-text" bindtap="goToRegister">立即注册</text>
     </view>
-    <button class="login-button" bindtap="goToPersonalCenter" style="width:50%">立即登录</button>
+
+    <!-- 点击登录时触发 onLogin 方法 -->
+    <button class="login-button" bindtap="onLogin" style="width:50%">立即登录</button>
   </view>
 </view>

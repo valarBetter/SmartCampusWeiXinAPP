@@ -8,11 +8,11 @@
 
     <view class="input-box">
       <view class="textName">学号</view>
-      <input class="input" placeholder="请输入学号" />
+      <input class="input" placeholder="请输入学号" bindinput="onInputStuId"/>
     </view>
     <view class="input-boxx">
-      <view class="textName">邮箱</view>
-      <input class="input" password="true" placeholder="请输入邮箱" />
+      <view class="textName">邮箱ID</view>
+      <input class="input" password="true" placeholder="请输入邮箱" bindinput="onInputId"/>
     </view>
 
     <view class="sendCode">
@@ -25,13 +25,14 @@
     </view>
     <view class="input-box">
       <view class="textName">新密码</view>
-      <input class="input" password="true" placeholder="请输入新密码" />
+      <input class="input" password="true" placeholder="请输入新密码" bindinput="onInputNewPassword"/>
     </view>
+    <!-- 输入确认密码 -->
     <view class="input-box">
       <view class="textName">确认密码</view>
-      <input class="input" password="true" placeholder="请确认密码" />
+      <input class="input" password="true" placeholder="请确认密码" bindinput="onInputConfirmPassword"/>
     </view>
 
-    <button class="reset-button">立即重置</button>
+    <button class="reset-button" bindtap="onResetPassword">立即重置</button>
   </view>
 </view>
