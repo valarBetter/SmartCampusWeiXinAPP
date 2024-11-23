@@ -67,11 +67,14 @@ page {
   .value{
     margin-left: 10rpx;
   }
-
-  .timelist{
+  .ttt{
     display: flex; 
     flex-direction: column;
     margin-left: 10rpx;
+  }
+  .timelist{
+    display: flex; 
+    flex-direction: column;
   }
   .buttonbox{
     margin-left: auto;

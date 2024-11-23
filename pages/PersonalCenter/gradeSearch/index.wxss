@@ -14,10 +14,11 @@
   background-color: #ffffff; 
   width: 100%;
   border-radius: 40rpx;
-  height: 9%;
+  height: 120rpx;
   margin-top: 20rpx; 
   align-items: center; 
   justify-content: center;
+
 }
 
 
@@ -29,7 +30,6 @@
   background-color: #ffffff; 
   width: 100%;
   border-radius: 40rpx; /* 设置圆角为 20rpx，使其边角变圆 */
-  height: 40%;
   margin-top: 20rpx; 
   align-items: center;
 }
@@ -39,6 +39,12 @@
   margin-top: 25rpx;
 }
 .listbox{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+.list{
   display: flex; 
   flex-direction: row;
   width: 100%;

@@ -4,11 +4,16 @@ Page({
    * 页面的初始数据
    */
   data: {
-    curfId: 1,
-    brandList: [{name: "1月" ,id: 1},
-      {name: "2月" ,id: 2},
-      {name: "3月" ,id: 3}],
-      curBrandName:"全部" ,
+      curfId1: 1,
+      curBrandName1:"选择学期" ,
+      brandList1: [{name: "2023-2024上" ,id: 1},
+      {name: "2023-2024下" ,id: 2},
+      {name: "2024-2025上" ,id: 3}],
+      curfId2: 1,
+      curBrandName2:"选择周数" ,
+      brandList2: [{name: "第1周" ,id: 1},
+      {name: "第2周" ,id: 2},
+      {name: "第3周" ,id: 3}],
     },
 
   /**

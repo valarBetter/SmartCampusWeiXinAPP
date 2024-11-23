@@ -1,37 +1,35 @@
-<!--pages/CampusInformation/index.wxml-->
+<!-- pages/CampusInformation/index.wxml -->
 <custom-header title="校园信息"></custom-header>
 <view class="container">
   <view class="header">
-    <input class="input" placeholder="请输入书名或者作者" bindinput="onInputAccount"/>
-    <button class="login-button" bindtap="goToPersonalCenter" style="width:20%">查询</button>
+    <image src="../../icon/list.png" class="searchicon"/>
+    <input class="input" placeholder="搜索通知" bindinput="onInputAccount"/>
   </view>
+
   <view class="select-box">
     <view class="select-time">
-      <select-postSale nowId="{{curfId}}" nameList="{{brandList}}" nowName="{{curBrandName}}" placeholder="请选择品牌" bind:handleChange="changeBrand"></select-postSale>
+      <select-postSale nowId="{{curfId1}}" nameList="{{brandList1}}" nowName="{{curBrandName1}}" placeholder="请选择年份" bind:handleChange="changeBrand"/>
     </view>
     <view class="select-class">
-      <select-postSale nowId="{{curfId}}" nameList="{{brandList}}" nowName="{{curBrandName}}" placeholder="请选择品牌" bind:handleChange="changeBrand"></select-postSale>
+      <select-postSale nowId="{{curfId2}}" nameList="{{brandList2}}" nowName="{{curBrandName2}}" placeholder="请选择类别" bind:handleChange="changeBrand"/>
     </view>
   </view>
 
-
-
-  <view class="function-box" bind:tap="gotoDetails">
+  <view class="function-box" wx:for="{{notificationList}}" wx:key="id" bind:tap="gotoDetails" data-id="{{item.id}}">
     <view class="box">
       <view class="box1">
-        <image src="../../icon/tapline.png" class="icon"></image>
-        <text class="notice-class-name">体育赛事</text>
+        <image src="../../icon/tapline.png" class="icon"/>
+        <text class="notice-class-name">{{item.category}}</text>
       </view>
-      <text class="title">校运会通知</text>
-      <text class="contain">为了增强学生体质</text>
+      <text class="title">{{item.title}}</text>
+      <text class="contain">{{item.form}}</text>
       <view class="box2">
-        <text class="root">学生处</text>
-        <text class="posttime">2024-10-20</text>
+        <text class="root">{{item.dep}}</text>
+        <text class="posttime">{{item.postTime}}</text>
       </view>
     </view>
     <view class="picture">
-        
+      <image src="{{item.picture}}" class="notification-image"/>
     </view>
   </view>
-
 </view>

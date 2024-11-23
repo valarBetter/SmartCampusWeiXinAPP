@@ -1,101 +1,325 @@
-/* components/my_select/index.wxss */
-
-.select_all_view {
+page {
+  width: 100%;
+  height: 100%;
+  background: #f4f6ff;
+}
+.container {
   display: flex;
-  z-index: 999;
-  width: 254rpx;/*框的背景宽度*/
-  height: 82rpx;
-  background: #F9F9F9;
-  border-radius: 12rpx 12rpx 12rpx 12rpx;
-  opacity: 1;
+  flex-flow: column;
+  width: 100%;
+  height: 100%;
 }
- 
-.select_view {
-  display: inline;
-  /* width: 200rpx;
-  height: 64rpx; */
+.search-box {
+  height: 100rpx;
 }
- 
-.inputPlaceholder {
-  min-width: 264rpx;/*框的宽度*/
-  height: 82rpx;
-  background: #F9F9F9;
-  border: 2rpx solid #F9F9F9;
-  border-radius: 12rpx 12rpx 12rpx 12rpx;
-  padding: 4rpx 0rpx 10rpx 10rpx;
-  /* color: #252525;
-  font-weight: 400; */
-  border-radius: 10rpx;
+.top-box {
+  width: 100%;
+  height: 100rpx;
+}
+/* 不显示滚动条 */
+::-webkit-scrollbar {
+  display: none;
+}
+.search-box {
   position: relative;
+  margin: 30rpx 18rpx 20rpx 22rpx;
+  height: 80rpx;
+}
+.search-icon {
+  width: 36rpx;
+  height: 35rpx;
+  background: url(https://static.sprucesmart.com/hbsk/abis/20230423/search-icon.png)
+    no-repeat center center;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 13rpx;
+  left: 30rpx;
+}
+.input-placeholder {
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #727272;
+  line-height: 30rpx;
+  opacity: 0.6;
+}
+.search-input {
+  width: 710rpx;
+  height: 60rpx;
+  background: #ffffff;
+  border-radius: 30rpx;
+  line-height: 60rpx;
+  padding-left: 77rpx;
+  box-sizing: border-box;
+}
+
+
+/* 二级弹窗 */
+.menubg {
+  display: none;
+  position: fixed;
+  top: 180rpx;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 99999999;
+}
+
+.middle-box {
+  /* 达到高度自适应 */
+  flex: 1 !important;
+  position: relative;
+}
+.good-item {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  flex: 0 0 100rpx;
+  padding: 26rpx 15rpx 39rpx 15rpx;
+  box-sizing: border-box;
+}
+.goods-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  /* background: #ffffff; */
+  border-radius: 30px 30px 0px 0px;
+  padding-bottom: 460rpx;
+  margin-top: 20rpx;
+}
+
+.good-img {
+  width: 352rpx;
+  height: 350rpx;
+}
+
+.goods-name {
+  width: 339rpx;
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #242424;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
-  font-size: 32rpx;
-  font-family: PingFang SC-Regular, PingFang SC;
-  color: #000000;
-  line-height: 38rpx;
+  word-break: break-all; /* 追加这一行代码 */
+  -webkit-line-clamp: 1;
 }
+.good-add {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10rpx 0;
+  box-sizing: border-box;
+}
+
+.goods-price {
+  font-size: 40rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #f43d19;
+}
+
+.dollar {
+  font-size: 28rpx;
+}
+.big-card-box {
+  width: 50rpx;
+  height: 50rpx;
  
-.select_view .inputPlaceholder .text {
-  height: 40rpx;
+}
+.add-card {
+  width: 30rpx;
+  height: 30rpx;
+  background: url(https://static.sprucesmart.com/hbsk/abis/20230423/add-card-icon.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  margin: 10rpx;
+}
+.add-card-box {
+  /* position: fixed; */
+  /* bottom: 0; */
+  /* left: 0; */
+  width: 750rpx;
+  height: 128rpx;
+  background: #ffffff;
+  border-radius: 30rpx 30rpx 0rpx 0rpx;
+  z-index: 888;
+  padding: 21rpx 29rpx 27rpx 38rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #2f3137;
+}
+.add-card-left {
   position: relative;
-  top: 30rpx;
+}
+
+.num {
+  display: inline-block;
+  background: #ffffff;
+  border: 2rpx solid #f62a19;
+  border-radius: 16rpx;
+  font-size: 22rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #f62a19;
+  padding: 0 13rpx;
+  box-sizing: border-box;
+  position: absolute;
+  top: -19rpx;
   left: 24rpx;
 }
- 
-.icon {
-  position: absolute;
-  right: 24rpx;
-  top: 30rpx;
+.card-icon {
+  width: 46rpx;
+  height: 45rpx;
+  background: url(https://static.sprucesmart.com/hbsk/abis/20230423/card-icon.png)
+    no-repeat center;
+  background-size: 100% 100%;
 }
- 
-.content {
-  position: absolute;
-  z-index: 999;
-  min-width: 200rpx;/*下拉框的最小宽度*/
-  max-height: 516rpx;
-  background: #F9F9F9;
-  box-shadow: 0rpx 12rpx 32rpx 0rpx rgba(0, 0, 0, 0.08), 0rpx 6rpx 12rpx -8rpx rgba(0, 0, 0, 0.12), 0rpx 18rpx 56rpx 16rpx rgba(0, 0, 0, 0.05);
-  border-radius: 16rpx 16rpx 16rpx 16rpx;
-  opacity: 1;
-  margin-top: 8rpx;
-  padding: 20rpx;
-  overflow-x: hidden;
+
+.add-card-right {
+  width: 210rpx;
+  height: 72rpx;
+  background: linear-gradient(124deg, #f2170c 0%, #ff6600 100%);
+  border-radius: 36rpx;
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 72rpx;
+  text-align: center;
+}
+.add-card-right1 {
+  width: 210rpx;
+  height: 72rpx;
+  background: #ccc;
+  border-radius: 36rpx;
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 72rpx;
+  text-align: center;
+}
+.card-pop {
+  width: 100%;
+  max-height: 460rpx;
   overflow-y: scroll;
+  background: #fff;
+  border-radius: 30rpx 30rpx 0rpx 0rpx;
+  padding: 50rpx 28rpx 31rpx 28rpx;
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  bottom: 135rpx;
+  /* z-index: 999; */
+}
+.card-box {
+  border-bottom: 2rpx solid #f2f2f2;
+}
+.card-box:last-child {
+  border: none;
+}
+.card-title {
+  width: 694rpx;
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #242424;
+  margin-top: 24rpx;
+  /* white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-line-clamp: 1; */
+}
+.card-price {
+  font-size: 40rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #f43d19;
+  margin-right: 126rpx;
+  width: 200rpx;
+}
+.card-edit {
+  margin-top: 31rpx;
   display: flex;
-  flex-direction: column;
+  margin-left: 172rpx;
+  margin-bottom: 31rpx;
+}
+.edit-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.reduce {
+  width: 16rpx;
+  height: 4rpx;
+  background: url(https://static.sprucesmart.com/hbsk/abis/20230423/recduce-icon.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  margin-right: 15rpx;
+}
+.no-reduce {
+  width: 16rpx;
+  height: 4rpx;
+  background: url(https://static.sprucesmart.com/hbsk/abis/20230423/no-reduce-icon.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  margin-right: 15rpx;
+}
+.add {
+  width: 16rpx;
+  height: 16rpx;
+  background: url(https://static.sprucesmart.com/hbsk/abis/20230423/add-icon.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  margin-left: 15rpx;
+}
+.number {
+  width: 71rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+  background: #f1f1f1;
+  border-radius: 6rpx;
+  font-size: 22rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #2f3137;
+  text-align: center;
+}
+.box {
+  width: 80rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dot {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  background: #f43d19;
+  display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-}
- 
-.content>.inputPlaceholder {
-  padding: 10rpx 0;
-}
- 
-.select_view .active {
-  width: 240rpx;/*下拉框的选项被选择后的宽度*/
-  height: 90rpx;
-  background: #F9F9F9;
-  font-size: 32rpx;
-  font-family: PingFang SC-Regular, PingFang SC;
-  font-weight: 600;
-  color: #000000;
-  line-height: 38rpx;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
- 
-.select_view .normal {
-  width: 240rpx;/*下拉框的选项未选择宽度*/
-  height: 90rpx;
-  border-radius: 16rpx 16rpx 16rpx 16rpx;
-  opacity: 1;
-  font-size: 32rpx;
-  font-family: PingFang SC-Regular, PingFang SC;
-  color: #000000;
-  line-height: 38rpx;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-size: 24rpx;
+  color: white;
+  z-index: 10000;
 }

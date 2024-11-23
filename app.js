@@ -12,6 +12,23 @@ App({
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
       }
     })
+    wx.http = (url, method, data, callback) => {
+      wx.request({
+        url: 'http://8.138.81.10:8080' + url, //请求的接口地址
+        method: method,
+        data: data || {},
+        header: {
+          "Authorization": ('Bearer ' + wx.getStorageSync('token')) || ''
+        },
+        success: (result) => {
+          callback(result.data)
+        },
+        fail: (error) => {
+          console.log(error)
+        }
+      });
+    }
+
   },
   globalData: {
     userInfo: null

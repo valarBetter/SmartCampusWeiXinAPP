@@ -2,44 +2,42 @@
 <custom-header title="图书查询"></custom-header>
 <view class="container">
   <view class="header">
-    <input class="input" placeholder="请输入书名或者作者" bindinput="onInputAccount"/>
+    <input class="input" placeholder="请输入书名或者作者" bindinput="onInputAccount" />
     <button class="login-button" bindtap="goToPersonalCenter" style="width:20%">查询</button>
   </view>
-  <view class="function-box">
+
+  <!-- 图书信息展示 -->
+  <view class="function-box" wx:for="{{books}}" wx:key="index">
     <view class="box">
       <text class="indexname">书名:</text>
-      <text class="indexname">活着</text>
+      <text class="indexname">{{item.bname}}</text>
     </view>
     <view class="box">
       <text class="indexname">作者:</text>
-      <text class="indexname">余华</text>
+      <text class="indexname">{{item.author}}</text>
     </view>
     <view class="box">
       <text class="indexname">索引号:</text>
-      <text class="indexname">132/32</text>
+      <text class="indexname">{{item.number}}</text>
     </view>
     <view class="box">
       <text class="indexname">出版社:</text>
-      <text class="indexname">人民出版社</text>
+      <text class="indexname">{{item.pubname}}</text>
     </view>
     <view class="box">
       <text class="indexname">出版时间:</text>
-      <text class="indexname">2010</text>
+      <text class="indexname">{{item.pubtime}}</text>
     </view>
     <view class="box">
       <text class="indexname">馆藏地点:</text>
-      <text class="indexname">图书馆一楼</text>
+      <text class="indexname">{{item.location}}</text>
     </view>
   </view>
 
+  <!-- 分页导航 -->
   <view class="lowwer">
-    <button class="login-button1" bindtap="goToPersonalCenter" style="width:30%">上一页</button>
-    <text>第</text>
-    <text>1</text>
-    <text>页/共</text>
-    <text>23</text>
-    <text>页</text>
-    <button class="login-button2" bindtap="goToPersonalCenter" style="width:30%">下一页</button>
+    <button class="login-button1" bindtap="goToPreviousPage" style="width:30%">上一页</button>
+    <text>第 {{page}} 页 / 共 {{totalPages}} 页</text>
+    <button class="login-button2" bindtap="goToNextPage" style="width:30%">下一页</button>
   </view>
-
 </view>
