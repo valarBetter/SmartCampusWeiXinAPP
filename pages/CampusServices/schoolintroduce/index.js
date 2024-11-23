@@ -1,66 +1,38 @@
 // pages/CampusServices/schoolintroduce/index.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    introduceList: [] // 用于存储学校简介数据
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad(options) {
-
+  onLoad() {
+    this.fetchSchoolIntroduce();
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage() {
-
+  // 获取学校简介数据
+  fetchSchoolIntroduce() {
+    const studentId = wx.getStorageSync('studentId'); // 获取用户ID
+    wx.request({
+      url: 'http://8.138.81.10:8080/students/schoolIntroduce',
+      method: 'GET',
+      data: { studentId },
+      success: (res) => {
+        if (res.data.code === 200) {
+          this.setData({
+            introduceList: res.data.data
+          });
+        } else {
+          wx.showToast({
+            title: '获取学校简介失败',
+            icon: 'none'
+          });
+        }
+      },
+      fail: () => {
+        wx.showToast({
+          title: '网络错误，请稍后再试',
+          icon: 'none'
+        });
+      }
+    });
   }
-})
+});

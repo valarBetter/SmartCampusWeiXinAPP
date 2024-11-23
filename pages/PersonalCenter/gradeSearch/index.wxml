@@ -3,23 +3,26 @@
 <view class="container">
   <view class="function-box">
     <text>选择学期：</text>
-    
     <select-postSale nowId="{{curfId}}" nameList="{{brandList}}" nowName="{{curBrandName}}" placeholder="请选择学期" bind:handleChange="changeBrand"></select-postSale>
   </view>
 
   <view class="course-box" wx:for="{{semesters}}" wx:key="semester">
     <view class="header">{{item.semester}}</view>
-    <view class="listbox" wx:for="{{item.courses}}" wx:key="courseName">
-      <view class="list" >
-        <view class="projectname">{{item.courseName}}</view>
+    <view class="listbox">
+      <view class="list">
+        <view class="projectname">课程名称</view>
+        <view class="gradelevel1">课程成绩</view>
+        <view class="projectname">考试类型</view>
+      </view>
+      <view class="transverseLine"></view>
+    </view>
+    <view class="listbox" wx:for="{{item.courses}}" wx:key="className">
+      <view class="list">
+        <view class="projectname">{{item.className}}</view>
         <view class="gradelevel">{{item.grade}}</view>
         <view class="projectname">{{item.examType}}</view>
       </view>
       <view class="transverseLine"></view>
     </view>
-
-
-    
   </view>
-
 </view>

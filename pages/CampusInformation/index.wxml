@@ -3,15 +3,21 @@
 <view class="container">
   <view class="header">
     <image src="../../icon/list.png" class="searchicon"/>
-    <input class="input" placeholder="搜索通知" bindinput="onInputAccount"/>
+    <input class="input" placeholder="搜索通知" bindinput="onInputSearch"/>
   </view>
 
   <view class="select-box">
     <view class="select-time">
-      <select-postSale nowId="{{curfId1}}" nameList="{{brandList1}}" nowName="{{curBrandName1}}" placeholder="请选择年份" bind:handleChange="changeBrand"/>
+      <select-postSale 
+  nowId="{{curfId1}}" 
+  nameList="{{brandList1}}" 
+  nowName="{{curBrandName1}}" 
+  placeholder="请选择年份" 
+  bind:handleChange="changeBrand1" />
+
     </view>
     <view class="select-class">
-      <select-postSale nowId="{{curfId2}}" nameList="{{brandList2}}" nowName="{{curBrandName2}}" placeholder="请选择类别" bind:handleChange="changeBrand"/>
+      <select-postSale nowId="{{curfId2}}" nameList="{{brandList2}}" nowName="{{curBrandName2}}" placeholder="请选择类别" bind:handleChange="changeBrand2"/>
     </view>
   </view>
 
@@ -19,17 +25,14 @@
     <view class="box">
       <view class="box1">
         <image src="../../icon/tapline.png" class="icon"/>
-        <text class="notice-class-name">{{item.category}}</text>
+        <text class="notice-class-name">{{item.notitype}}</text>
       </view>
       <text class="title">{{item.title}}</text>
-      <text class="contain">{{item.form}}</text>
+      <text class="contain">{{item.content}}</text>
       <view class="box2">
-        <text class="root">{{item.dep}}</text>
-        <text class="posttime">{{item.postTime}}</text>
+        <text class="root">{{item.department}}</text>
+        <text class="posttime">{{item.createdTime}}</text>
       </view>
-    </view>
-    <view class="picture">
-      <image src="{{item.picture}}" class="notification-image"/>
     </view>
   </view>
 </view>

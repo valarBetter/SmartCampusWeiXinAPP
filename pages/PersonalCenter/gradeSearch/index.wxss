@@ -65,6 +65,12 @@
   margin-top: 10rpx;
   color: rgba(42, 130, 228, 1);
 }
+
+.gradelevel1{
+  width: 30.3%;
+  text-align: left; 
+  margin-top: 10rpx;
+}
 .transverseLine{
   background: #cdd1c5;
   width: 83%;

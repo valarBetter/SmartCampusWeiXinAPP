@@ -1,12 +1,11 @@
 <!--pages/CampusServices/schoolmap/index.wxml-->
 <custom-header title="学校地图"></custom-header>
 <view class="container">
-  <view class="function-box">
-    <view class="header">
-      花江地图
+  <block wx:for="{{mapList}}" wx:key="id">
+    <view class="function-box">
+      <view class="header">{{item.mapInfo}}</view>
+      <image src="{{item.mapUrl}}" class="introduce"/>
+      <button class="login-button" bindtap="saveImage" data-url="{{item.mapUrl}}" style="width:20%">保存</button>
     </view>
-    <image src="../../../icon/personalpicture.png" class="introduce"/>
-    <button class="login-button" bindtap="goToPersonalCenter" style="width:20%">查询</button>
-  </view>
-
+  </block>
 </view>

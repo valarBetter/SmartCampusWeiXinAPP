@@ -50,12 +50,16 @@ Component({
    // 选择数据后回显
    changecontent(e) {
     this.setData({
-     select: e.currentTarget.dataset.datavalue.name,
-     selectId: e.currentTarget.dataset.datavalue.id,
-     changable: false
-    })
-    this.triggerEvent("handleChange", {selectId: this.data.selectId, select: this.data.select});//向父组件传参
-   },
+      select: e.currentTarget.dataset.datavalue.name,
+      selectId: e.currentTarget.dataset.datavalue.id,
+      changable: false
+    });
+    this.triggerEvent("handleChange", {
+      selectId: e.currentTarget.dataset.datavalue.id,
+      select: e.currentTarget.dataset.datavalue.name
+    });
+  },
+  
    //处理数据，复制一遍，因为子组件不能直接改变父组件的传进来的值。
    processData(){
     let options = [];

@@ -1,7 +1,5 @@
 /* pages/CampusServices/booksearch/index.wxss */
-page {
-  overflow: hidden; /* 禁用页面滚动 */
-}
+
 .container {
   display: flex; 
   flex-direction: column; /* 子元素垂直排列 */

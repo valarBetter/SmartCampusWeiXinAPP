@@ -1,66 +1,23 @@
 // pages/CampusInformation/details/index.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    detail: {}, // 存储当前通知详情
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad(options) {
+    const { id } = options; // 获取通知的 ID
+    const notifications = wx.getStorageSync('notifications') || []; // 从本地存储读取通知列表
+    const detail = notifications.find(item => item.id === parseInt(id)); // 根据 ID 查找通知详情
 
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage() {
-
+    if (detail) {
+      this.setData({
+        detail // 更新通知详情
+      });
+    } else {
+      wx.showToast({
+        title: "未找到通知详情",
+        icon: "none"
+      });
+    }
   }
-})
+});

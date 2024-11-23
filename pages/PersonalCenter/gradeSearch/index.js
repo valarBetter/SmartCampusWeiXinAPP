@@ -14,31 +14,33 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-    const userId = '你的用户ID'; // 替换为实际用户ID
+    const userId = wx.getStorageSync('studentId'); // 使用存储的用户ID
     const semester = this.data.curBrandName !== '全部' ? this.data.curBrandName : ''; // 只有在不选择“全部”时传递
   
     wx.request({
-      url: 'https://example.com/mockGradeSearch',
+      url: 'http://8.138.81.10:8080/students/gradesearch',
       method: 'GET',
       data: {
-        userId: userId,
-        semester: semester
-      }, 
+        id: 111 //userId
+      },
       success: (res) => {
         console.log(res.data); // 打印返回的 data 对象
-        console.log(res.status);
-        if (res.data.userId==="123456") {
+        if (res.data.code === 200 && res.data.data) {
+          // 将课程信息按学期分类（此处可以根据需要自行分配学期）
+          const semesters = [{
+            semester: '2024-2025下半学期', // 示例学期
+            courses: res.data.data
+          }];
           this.setData({
-            semesters: res.data.semesters // 设置成绩数据
+            semesters: semesters // 设置成绩数据
           });
         } else {
           wx.showToast({
-            title: '数据加载失败11',
+            title: '数据加载失败',
             icon: 'none'
           });
         }
       },
-      
       fail: () => {
         wx.showToast({
           title: '网络错误',
@@ -47,6 +49,7 @@ Page({
       }
     });
   },
+  
   
 
   /**
