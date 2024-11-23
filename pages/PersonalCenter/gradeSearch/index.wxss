@@ -1,5 +1,7 @@
 /* pages/PersonalCenter/gradeSearch/index.wxss */
-
+page {
+  overflow: hidden; /* 禁用页面滚动 */
+}
 
 .container {
   display: flex; 
