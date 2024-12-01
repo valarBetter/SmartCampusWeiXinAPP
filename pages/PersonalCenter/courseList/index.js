@@ -44,7 +44,7 @@ Page({
       url: 'http://8.138.81.10:8080/students/courseSchedule',
       method: 'GET',
       data: {
-        id: 111,//studentId
+        id: studentId,//studentId
         semester, // 假设接口支持此参数
         week,     // 假设接口支持此参数
       },

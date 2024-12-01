@@ -21,7 +21,7 @@ Page({
       url: 'http://8.138.81.10:8080/students/gradesearch',
       method: 'GET',
       data: {
-        id: 111 //userId
+        id: userId //userId
       },
       success: (res) => {
         console.log(res.data); // 打印返回的 data 对象

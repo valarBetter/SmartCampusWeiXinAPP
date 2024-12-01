@@ -9,7 +9,7 @@
     <block wx:for="{{phoneList}}" wx:key="id">
       <view class="list" bindtap="showPhoneNumber" data-name="{{item.name}}" data-phone="{{item.phoneNumber}}">
         <view class="list-box">
-          <image src="../../../icon/personalpicture.png" class="phoneicon"></image>
+          <image src="../../../icon/personalMessage.png" class="phoneicon"></image>
           <view class="textname">{{item.name}}</view>
         </view>
         <view class="transverseLine"></view>

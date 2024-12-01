@@ -30,10 +30,6 @@
                     <text>星期三</text>
                     <text class="value">第二节</text>
                   </view>
-                  <view class="detail">
-                    <text>星期四</text>
-                    <text class="value">第四节</text>
-                  </view>
                 </view>
               </view>
               <view class="detail">
@@ -75,10 +71,6 @@
                   <view class="detail">
                     <text>星期三</text>
                     <text class="value">第二节</text>
-                  </view>
-                  <view class="detail">
-                    <text>星期四</text>
-                    <text class="value">第四节</text>
                   </view>
                 </view>
               </view>
