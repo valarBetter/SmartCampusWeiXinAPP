@@ -49,31 +49,46 @@ Page({
       return;
     }
 
-    // 使用封装的 http 方法来替代 wx.request
-    wx.http('/students/login', 'POST', {
-      studentId: account,  // 使用账号作为学号（stuId）
-      studentPassword: password  // 使用密码（opassword）
-    }, (res) => {
-      if (res.code === 0 && res.status === 'success') {
-        // 登录成功，跳转到个人信息页面
-        console.log('登录成功', res.data);
-        wx.setStorageSync('token', res.token || ''); // 保存 token （如果需要）
-        wx.setStorageSync('userInfo', { stuId: account }); // 存储用户信息（可以根据实际返回的数据做调整）
+    // 将数据拼接为 form-data 格式
+    const formData = `studentId=${account}&studentPassword=${password}`;
 
-        // 跳转到个人信息页面
-        wx.switchTab({
-          url: '/pages/PersonalCenter/index',
-          fail: function (err) {
-            console.error('跳转失败:', err);  // 输出跳转失败的错误信息
-          }
-        });
-      } else {
-        // 登录失败，提示错误信息
+    wx.request({
+      url: 'http://8.138.81.10:8080/students/login',
+      method: 'POST',
+      data: formData, // 使用拼接的 form-data 字符串
+      header: {
+        'Content-Type': 'application/x-www-form-urlencoded', // 设置为 form-data
+      },
+      success: (res) => {
+        if (res.data.code === 0 && res.data.status === 'success') {
+          // 登录成功，跳转到个人信息页面
+          console.log('登录成功', res.data);
+          wx.setStorageSync('token', res.data.token || ''); // 保存 token （如果需要）
+          wx.setStorageSync('studentId',  account); // 保存 token （如果需要）
+          wx.setStorageSync('userInfo', { stuId: account }); // 存储用户信息（可以根据实际返回的数据做调整）
+
+          // 跳转到个人信息页面
+          wx.switchTab({
+            url: '/pages/PersonalCenter/index',
+            fail: function (err) {
+              console.error('跳转失败:', err);  // 输出跳转失败的错误信息
+            }
+          });
+        } else {
+          // 登录失败，提示错误信息
+          wx.showToast({
+            title: res.data.message || '登录失败',
+            icon: 'none'
+          });
+          console.error('登录失败', res.data);
+        }
+      },
+      fail: (err) => {
+        console.error('请求失败:', err);
         wx.showToast({
-          title: res.message || '登录失败',
+          title: '请求失败，请检查网络连接',
           icon: 'none'
         });
-        console.error('登录失败', res);
       }
     });
   }

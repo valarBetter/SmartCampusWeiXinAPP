@@ -50,7 +50,7 @@ page {
 .box{
   display: flex; 
   flex-direction: column;
-  width: 60%;
+  width: 93%;
   height: 90%;
   margin-left: 20rpx;
   margin-top: 20rpx;
@@ -71,11 +71,17 @@ page {
 }
 
 
-.contain{
+.contain {
   font-size: 27rpx;
   margin-left: 10rpx;
   margin-top: 5rpx;
+
+  display: -webkit-box; /* 定义为弹性盒子 */
+  -webkit-box-orient: vertical; /* 垂直排列子元素 */
+  -webkit-line-clamp: 4; /* 限制显示2行 */
+  overflow: hidden; /* 隐藏超出部分 */
 }
+
 
 
 .notice-class-name{
@@ -95,14 +101,14 @@ page {
   height: 80%;
   margin-right: 5%;
   background-color: #ffffff; 
-  border-radius: 20rpx;
+  border-radius: 40rpx;
 }
 .select-class{
   width: 40%;
   height: 80%;
   margin-left: 11.5%;
   background-color: #ffffff; 
-  border-radius: 20rpx;
+  border-radius: 40rpx;
 }
 .picture{
   width: 40%;

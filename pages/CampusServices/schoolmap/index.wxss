@@ -22,7 +22,8 @@
 }
 .introduce{
   margin-top: 20rpx;
-  height: 450rpx;
+  max-height: 300px; /* 限定最大高度为200px，可根据实际需要调整 */
+  object-fit: contain; /* 保持图片比例 */
   width: 90%;
 }
 .login-button {

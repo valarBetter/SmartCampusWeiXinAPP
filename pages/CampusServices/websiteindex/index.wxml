@@ -2,21 +2,15 @@
 <custom-header title="常用链接"></custom-header>
 <view class="container">
   <view class="function-box">
-    <view class="list">
-      <view class="list-box">
-        <view class="phoneicon">1.</view>
-        <view class="textname">院长</view>
+    <block wx:for="{{linkList}}" wx:key="id">
+      <view class="list" bindtap="showLinkDetails" data-name="{{item.name}}" data-url="{{item.url}}">
+        <view class="list-box">
+          <view class="phoneicon">{{index + 1}}.</view>
+          <view class="textname">{{item.name}}</view>
+        </view>
+        <view class="transverseLine"></view>
       </view>
-      <view class="transverseLine"></view>
-    </view>
-
-    <view class="list">
-      <view class="list-box">
-        <view class="phoneicon">20.</view>
-        <view class="textname">院长</view>
-      </view>
-      <view class="transverseLine"></view>
-    </view>
-
+    </block>
   </view>
 </view>
+<van-dialog id="van-dialog" show="{{showDialog}}" title="{{linkTitle}}" message="{{linkUrl}}" show-cancel-button="{{false}}" confirm-button-text="确认" bind:close="onClose" />

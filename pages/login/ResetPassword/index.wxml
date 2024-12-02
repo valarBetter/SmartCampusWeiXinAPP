@@ -11,7 +11,7 @@
       <input class="input" placeholder="请输入学号" bindinput="onInputStuId"/>
     </view>
     <view class="input-boxx">
-      <view class="textName">邮箱ID</view>
+      <view class="textName">ID</view>
       <input class="input" password="true" placeholder="请输入邮箱" bindinput="onInputId"/>
     </view>
 

@@ -1,5 +1,7 @@
 /* pages/PersonalCenter/gradeSearch/index.wxss */
-
+page {
+  overflow: hidden; /* 禁用页面滚动 */
+}
 
 .container {
   display: flex; 
@@ -64,6 +66,12 @@
   text-align: left; 
   margin-top: 10rpx;
   color: rgba(42, 130, 228, 1);
+}
+
+.gradelevel1{
+  width: 30.3%;
+  text-align: left; 
+  margin-top: 10rpx;
 }
 .transverseLine{
   background: #cdd1c5;

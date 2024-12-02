@@ -43,7 +43,7 @@ page {
   display: flex; 
   flex-direction: column;
   width: 90%;
-  height: 390rpx;
+  height: 250rpx;
   margin-top: 20rpx;
 }
 .transverseLine{

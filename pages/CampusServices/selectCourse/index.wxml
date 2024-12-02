@@ -3,81 +3,21 @@
 <view class="container">
   <view class="function-box">
     <view class="header">
-      <van-tabs active="{{ active }}" bind:change="onChangeTab">
+      <van-tabs active="{{ active }}" bind:change="onChange">
         <van-tab title="已选课程">
-          <block wx:for="{{selectedCourses}}" wx:key="courseID">
-            <view class="coursedetail-box">
-              <view class="transverseLine"></view>
-              <view class="coursename">{{item.className}}</view>
-              <view class="coursedetail">
-                <view class="detail">
-                  <text>授课地点：</text>
-                  <text class="value">{{item.location}}</text>
-                </view>
-                <view class="detail">
-                  <text>授课老师：</text>
-                  <text class="value">{{item.teacher}}</text>
-                </view>
-                <view class="detail">
-                  <text>开课时间：</text>
-                  <view class="ttt">
-                    <view class="timelist" wx:for="{{item.schedule}}" wx:for-item="subitem" wx:key="allweek">
-                      <view class="detail1">
-                        <text>{{subitem.allweek}}</text>
-                      </view>
-                      <view class="detail">
-                        <text>{{subitem.week}}</text>
-                        <text class="value">{{subitem.day}}</text>
-                      </view>
-                    </view>
-                  </view>
-                </view>
-                <view class="detail">
-                  <text>课程学分：</text>
-                  <text class="value">{{item.credit}}</text>
-                </view>
-                <view class="detail">
-                  <text>课程简介：</text>
-                  <text class="value">{{item.description}}</text>
-                </view>
-                <view class="buttonbox">
-                  <van-button type="warning" size="small" data-id="{{item.courseID}}" bindtap="withdrawCourse">退课</van-button>
-                </view>
+          <view class="coursedetail-box">
+            <view class="transverseLine"></view>
+            <view class="coursename">计算机忘了</view>
+            <view class="coursedetail">
+              <view class="detail">
+                <text>授课地点：</text>
+                <text class="value">17203教室</text>
               </view>
-            </view>
-          </block>
-        </van-tab>
-
-        <van-tab title="可选课程">
-          <block wx:for="{{availableCourses}}" wx:key="courseID">
-            <view class="coursedetail-box">
-              <view class="transverseLine"></view>
-              <view class="coursename">{{item.className}}</view>
-              <view class="coursedetail">
-                <view class="detail">
-                  <text>授课地点：</text>
-                  <text class="value">{{item.location}}</text>
-                </view>
-                <view class="detail">
-                  <text>授课老师：</text>
-                  <text class="value">{{item.teacher}}</text>
-                </view>
-
-                
-                <view class="detail">
-                  <text>开课时间：</text>
-                  <view class="timelist" wx:for="{{item.schedule}}" wx:for-item="subitem" wx:key="allweek">
-                    <view class="detail1">
-                      <text>{{subitem.allweek}}</text>
-                    </view>
-                    <view class="detail">
-                      <text>{{subitem.week}}</text>
-                      <text class="value">{{subitem.day}}</text>
-                    </view>
-                  </view>
-                </view>
-
-              <!-- <view class="detail">
+              <view class="detail">
+                <text>授课老师：</text>
+                <text class="value">马云</text>
+              </view>
+              <view class="detail">
                 <text>开课时间：</text>
                 <view class="timelist">
                   <view class="detail1">
@@ -85,39 +25,68 @@
                   </view>
                   <view class="detail">
                     <text>12周</text>
-                    <text>至</text>
-                    <text>20周</text>
                   </view>
                   <view class="detail">
                     <text>星期三</text>
                     <text class="value">第二节</text>
                   </view>
-                  <view class="detail">
-                    <text>星期四</text>
-                    <text class="value">第四节</text>
-                  </view>
                 </view>
-              </view> -->
-
-
-
-
-
-
-                <view class="detail">
-                  <text>课程学分：</text>
-                  <text class="value">{{item.credit}}</text>
-                </view>
-                <view class="detail">
-                  <text>课程简介：</text>
-                  <text class="value">{{item.description}}</text>
-                </view>
-                <view class="buttonbox">
-                  <van-button type="warning" size="small" data-id="{{item.courseID}}" bindtap="withdrawCourse">退课</van-button>
+              </view>
+              <view class="detail">
+                <text>课程学分：</text>
+                <text class="value">2分</text>
+              </view>
+              <view class="detail">
+                <text>课程简介：</text>
+                <text class="value">课程内容，课程目标</text>
+                <view class="buttonbox" >
+                  <van-button type="primary" size="small">选课</van-button>
                 </view>
               </view>
             </view>
-          </block>
+          </view>
+        </van-tab>
+        <van-tab title="可选课程">
+          <view class="coursedetail-box">
+            <view class="transverseLine"></view>
+            <view class="coursename">计算机没忘</view>
+            <view class="coursedetail">
+              <view class="detail">
+                <text>授课地点：</text>
+                <text class="value">17203教室</text>
+              </view>
+              <view class="detail">
+                <text>授课老师：</text>
+                <text class="value">马云</text>
+              </view>
+              <view class="detail">
+                <text>开课时间：</text>
+                <view class="timelist">
+                  <view class="detail1">
+                    <text>2023-2024下半学期</text>
+                  </view>
+                  <view class="detail">
+                    <text>12周</text>
+                  </view>
+                  <view class="detail">
+                    <text>星期三</text>
+                    <text class="value">第二节</text>
+                  </view>
+                </view>
+              </view>
+              <view class="detail">
+                <text>课程学分：</text>
+                <text class="value">2分</text>
+              </view>
+              <view class="detail">
+                <text>课程简介：</text>
+                <text class="value">课程内容，课程目标</text>
+                <view class="buttonbox" >
+                  <van-button type="warning" size="small">退课</van-button>
+                </view>
+              </view>
+            </view>
+          </view>
         </van-tab>
       </van-tabs>
     </view>

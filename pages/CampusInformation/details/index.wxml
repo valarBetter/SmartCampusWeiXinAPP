@@ -2,13 +2,13 @@
 <custom-header title="通知详情"></custom-header>
 <view class="container">
   <view class="function-box">
-    <text class="title">校运会通知</text>
+    <text class="title">{{detail.title}}</text>
     <view class="posttime">
-      <text class="time">2024-10-27 20:20:22</text>
+      <text class="time">{{detail.createdTime}}</text>
     </view>
-    <view class="details">这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容</view>
+    <view class="details">{{detail.content}}</view>
     <view class="postman">
-      <text class="namea">学生会</text>
+      <text class="namea">{{detail.department}}</text>
     </view>
   </view>
 </view>
